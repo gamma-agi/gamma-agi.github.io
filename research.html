@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAMMA Lab — Research</title>
+  <meta name="description" content="Full publication archive of GAMMA Lab at the University of Maryland — audio language models, benchmarks, self-supervised learning, and more.">
+
+  <script>
+    (function(){var t=localStorage.getItem('gamma-theme');if(!t)t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);})();
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────────────── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <a href="index.html" class="nav-logo">GAMMA<span>Lab</span></a>
+      <div class="nav-sep" aria-hidden="true"></div>
+      <a href="https://www.cs.umd.edu/" class="nav-umd" target="_blank" rel="noopener">University of Maryland</a>
+    </div>
+    <div class="nav-right">
+      <a href="research.html" class="nav-link active">Research</a>
+      <a href="people.html"   class="nav-link">People</a>
+      <a href="index.html#updates" class="nav-link">Updates</a>
+      <a href="events.html"  class="nav-link">Events</a>
+      <button class="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile-menu" aria-label="Mobile navigation">
+    <a href="research.html" class="nav-link active">Research</a>
+    <a href="people.html"   class="nav-link">People</a>
+    <a href="index.html#updates" class="nav-link">Updates</a>
+    <a href="events.html"  class="nav-link">Events</a>
+  </div>
+</nav>
+
+<!-- ── Page header ────────────────────────────────────────────── -->
+<header class="page-header">
+  <div class="container">
+    <span class="section-label">Publications</span>
+    <h1 class="page-title serif">Research</h1>
+    <p class="page-subtitle">
+      Papers from GAMMA Lab spanning audio-language models, benchmarks, self-supervised learning,
+      speech processing, and multimodal interaction.
+    </p>
+  </div>
+</header>
+
+<!-- ── Filter bar ─────────────────────────────────────────────── -->
+<div class="filter-bar" role="search" aria-label="Filter publications">
+  <div class="filter-inner">
+
+    <div class="filter-row">
+      <span class="filter-label">Theme</span>
+      <button class="filter-pill active" data-filter-type="theme" data-filter-value="all">All</button>
+      <button class="filter-pill" data-filter-type="theme" data-filter-value="audio-llm">Audio-Language Models</button>
+      <button class="filter-pill" data-filter-type="theme" data-filter-value="benchmarks">Benchmarks</button>
+      <button class="filter-pill" data-filter-type="theme" data-filter-value="audio-text">Audio-Text Alignment</button>
+      <button class="filter-pill" data-filter-type="theme" data-filter-value="ssl">Self-Supervised Learning</button>
+      <button class="filter-pill" data-filter-type="theme" data-filter-value="speech">Speech &amp; ASR</button>
+      <button class="filter-pill" data-filter-type="theme" data-filter-value="data">Data &amp; Augmentation</button>
+      <button class="filter-pill" data-filter-type="theme" data-filter-value="domain">Domain Adaptation</button>
+      <button class="filter-pill" data-filter-type="theme" data-filter-value="multimodal">Multimodal</button>
+    </div>
+
+    <div class="filter-row">
+      <span class="filter-label">Venue</span>
+      <button class="filter-pill active" data-filter-type="venue" data-filter-value="all">All</button>
+      <button class="filter-pill" data-filter-type="venue" data-filter-value="NeurIPS">NeurIPS</button>
+      <button class="filter-pill" data-filter-type="venue" data-filter-value="ICML">ICML</button>
+      <button class="filter-pill" data-filter-type="venue" data-filter-value="ICLR">ICLR</button>
+      <button class="filter-pill" data-filter-type="venue" data-filter-value="EMNLP">EMNLP</button>
+      <button class="filter-pill" data-filter-type="venue" data-filter-value="NAACL">NAACL</button>
+      <button class="filter-pill" data-filter-type="venue" data-filter-value="ACL">ACL</button>
+      <button class="filter-pill" data-filter-type="venue" data-filter-value="ICASSP">ICASSP</button>
+      <button class="filter-pill" data-filter-type="venue" data-filter-value="AAAI">AAAI</button>
+      <button class="filter-pill" data-filter-type="venue" data-filter-value="WASPAA">WASPAA</button>
+      <button class="filter-pill" data-filter-type="venue" data-filter-value="preprint">Preprint</button>
+    </div>
+
+    <div class="filter-row">
+      <span class="filter-label">Year</span>
+      <button class="filter-pill active" data-filter-type="year" data-filter-value="all">All</button>
+      <button class="filter-pill" data-filter-type="year" data-filter-value="2025">2025</button>
+      <button class="filter-pill" data-filter-type="year" data-filter-value="2024">2024</button>
+      <button class="filter-pill" data-filter-type="year" data-filter-value="2023">2023</button>
+      <button class="filter-pill" data-filter-type="year" data-filter-value="other">Earlier</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── Papers list ─────────────────────────────────────────────── -->
+<div class="papers-list" role="list" aria-label="Publications">
+
+  <div id="papers-empty" class="papers-empty">
+    No papers match the selected filters.
+  </div>
+
+  <!-- ── Audio Flamingo 3 ─────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="NeurIPS" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">NeurIPS 2025</span>
+        <span class="spotlight-badge">Spotlight</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">Audio Flamingo 3: Advancing Audio Intelligence with Fully Open Large Audio Language Models</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Sonal Kumar, Sakshi, Ashish Seth, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio LLMs</span>
+          <span class="tag">Reasoning</span>
+          <span class="tag">Multi-Turn</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A fully open large audio-language model featuring the AF-Whisper unified encoder, flexible thinking capabilities, multi-turn chat, and 10-minute audio understanding. AF3 supports voice-to-voice interaction across speech, sound, and music modalities, setting new state-of-the-art performance on MMAU, Air-Bench, and other major audio understanding benchmarks.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2507.08128" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Audio Flamingo 2 ─────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="ICML" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICML 2025</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">Audio Flamingo 2: An Audio-Language Model with Long-Audio Understanding and Expert Reasoning Abilities</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Sonal Kumar, Ashish Seth, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio LLMs</span>
+          <span class="tag">Long-Form Audio</span>
+          <span class="tag">Reasoning</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        An audio-language model with a custom CLAP encoder and synthetic QA data, extending understanding to 30-second to 5-minute audio segments. Introduces the LongAudio dataset for long-form audio training, enabling expert-level reasoning over extended audio across speech, music, and environmental sound domains.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2503.03983" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MMAU ─────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="benchmarks" data-venue="ICLR" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICLR 2025</span>
+        <span class="spotlight-badge">Spotlight</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">MMAU: A Massive Multitask Audio Understanding Benchmark</div>
+        <div class="paper-row-authors">Sakshi, Utkarsh Tyagi, Sonal Kumar, Sreyan Ghosh, Ashish Seth, Ramaneswaran S., Nishit Anand, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Benchmarks</span>
+          <span class="tag">Evaluation</span>
+          <span class="tag">Audio Understanding</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        Comprehensive benchmark with 10,000 audio clips paired with expert-annotated questions covering speech, environmental sounds, and music, requiring 27 distinct skills. MMAU tests models on perception, understanding, and reasoning far beyond simple classification, providing a standardized EvalAI leaderboard for community-wide evaluation and comparison.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/pdf/2410.19168" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/Sakshi113/mmau" class="paper-link" target="_blank" rel="noopener">Code</a>
+        <a href="https://eval.ai/web/challenges/challenge-page/2391/overview" class="paper-link" target="_blank" rel="noopener">EvalAI</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MMAU-Pro ──────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="benchmarks" data-venue="AAAI" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">AAAI 2026</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">MMAU-Pro: A Challenging and Comprehensive Benchmark for Holistic Evaluation of Audio General Intelligence</div>
+        <div class="paper-row-authors">Sakshi, Sreyan Ghosh, Sonal Kumar, Nishit Anand, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Benchmarks</span>
+          <span class="tag">Evaluation</span>
+          <span class="tag">Reasoning</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A benchmark containing 5,305 instances with audio paired to expert-generated Q&A across speech, sound, and music. Evaluates models on 49 unique skills including long-form comprehension and spatial reasoning. Tests 22 models, revealing limitations where even state-of-the-art systems achieve only 59.2% accuracy — exposing gaps that simpler benchmarks cannot surface.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/pdf/2508.13992" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── GAMA ─────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="EMNLP" data-year="2024" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">EMNLP 2024</span>
+        <span class="spotlight-badge">Oral</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">GAMA: A Large Audio-Language Model with Advanced Audio Understanding</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Sonal Kumar, Ashish Seth, Chandra Kiran Evuru, Utkarsh Tyagi, Oriol Nieto, Ramani Duraiswami, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio LLMs</span>
+          <span class="tag">Instruction Tuning</span>
+          <span class="tag">QA</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        GAMA (General-purpose Audio-Language Model with Attributes) is an instruction-following audio-language model that combines audio encoders with large language models for rich audio question answering, captioning, and reasoning. GAMA introduces attribute-based audio representation that captures fine-grained acoustic properties — timbre, rhythm, pitch, and spatial characteristics — enabling more grounded and interpretable responses than prior audio LLMs.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2406.11768" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/Sreyan88/GAMA" class="paper-link" target="_blank" rel="noopener">Code</a>
+        <a href="https://huggingface.co/spaces/sonalkum/GAMA" class="paper-link" target="_blank" rel="noopener">Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MultiVox ─────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="multimodal" data-venue="EMNLP" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">EMNLP 2025</span>
+        <span class="spotlight-badge">Oral</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">MultiVox: A Benchmark for Evaluating Voice Assistants for Multimodal Interactions</div>
+        <div class="paper-row-authors">Nishit Anand, Sonal Kumar, Sreyan Ghosh, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Multimodal</span>
+          <span class="tag">Dialogue</span>
+          <span class="tag">Audio-Visual</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        The first omni voice assistant benchmark, featuring 1,000 annotated dialogues that evaluate the integration of paralinguistic speech features and visual cues for multimodal understanding. MultiVox exposes significant gaps in how current voice assistants handle non-verbal speech cues and visual context simultaneously.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2507.10859" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── EgoIllusion ──────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="multimodal" data-venue="EMNLP" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">EMNLP 2025</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">EgoIllusion: Benchmarking Auditory Illusion Robustness in Egocentric Audio-Visual Models</div>
+        <div class="paper-row-authors">Ramaneswaran S., Sakshi, Sreyan Ghosh, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Multimodal</span>
+          <span class="tag">Benchmarks</span>
+          <span class="tag">Robustness</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        EgoIllusion investigates how audio-language models can be misled by acoustic illusions within egocentric audio-visual scenarios. Through a novel benchmark of auditory illusion cases in first-person video, we expose systematic failure modes in current models that rely on shallow acoustic cues rather than genuine perceptual reasoning. We further propose mitigation strategies and training interventions for more robust perceptual audio-visual understanding.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2508.12687" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── EH-MAM ───────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="ssl" data-venue="EMNLP" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">EMNLP 2025</span>
+        <span class="spotlight-badge">Oral</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">EH-MAM: Easy-to-Hard Masked Acoustic Modeling for Self-Supervised Speech Representation Learning</div>
+        <div class="paper-row-authors">Ashish Seth, Sreyan Ghosh, Sonal Kumar, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Self-Supervised Learning</span>
+          <span class="tag">Masked Modeling</span>
+          <span class="tag">Pre-training</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A self-supervised approach using an adaptive masking strategy that progressively increases difficulty — masking easy acoustic regions first, then harder ones — for improved speech representation learning. EH-MAM consistently outperforms uniform masking baselines across downstream classification, detection, and retrieval tasks.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/pdf/2410.13179" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/cs20s030/ehmam" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ProSE ────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="speech" data-venue="NAACL" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">NAACL 2025</span>
+        <span class="spotlight-badge">Oral</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">ProSE: Diffusion Priors for Speech Enhancement</div>
+        <div class="paper-row-authors">Sonal Kumar, Sreyan Ghosh, Ashish Seth, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Speech Enhancement</span>
+          <span class="tag">Curriculum Learning</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        Proposes a methodology applying diffusion models in latent space to generate priors that are integrated into transformer-based regression for speech enhancement. The diffusion prior captures the full distribution of clean speech, enabling the regression model to produce higher-fidelity enhanced speech with state-of-the-art performance on standard benchmarks.
+      </div>
+      <div class="paper-links">
+        <a href="https://openreview.net/pdf?id=7lAoYRrEcw" class="paper-link" target="_blank" rel="noopener">Paper</a>
+        <a href="https://github.com/sonalkum/ProSE" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PAT ──────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-text" data-venue="NAACL" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">NAACL 2025</span>
+        <span class="spotlight-badge">Oral</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">PAT: Parameter-Free Audio-Text Aligner to Boost Zero-Shot Audio Classification</div>
+        <div class="paper-row-authors">Ashish Seth, Sreyan Ghosh, Sonal Kumar, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio-Text</span>
+          <span class="tag">Contrastive Learning</span>
+          <span class="tag">Zero-Shot</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A training and parameter-free method that improves zero-shot audio classification through enhanced audio-text alignment via mutual feedback between the audio encoder and text representations. PAT requires no additional training or parameters — it is applied directly at inference to improve alignment quality, achieving strong gains on zero-shot classification benchmarks.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/pdf/2410.15062" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/cs20s030/PAT" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── RobustCLAP ───────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-text" data-venue="NAACL" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">NAACL 2025</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">RobustCLAP: Linguistically Robust Audio-Text Contrastive Learning</div>
+        <div class="paper-row-authors">Ramaneswaran S., Sreyan Ghosh, Sonal Kumar, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio-Text</span>
+          <span class="tag">CLAP</span>
+          <span class="tag">Robustness</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        Enhances audio-language representations to handle linguistic diversity through a multi-view contrastive learning objective. RobustCLAP trains on paraphrase, negation, and attribute-permuted variants of audio captions, producing significantly more robust models that maintain high retrieval and classification performance across diverse natural language phrasings.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/pdf/2410.16505" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/ramaneswaran/linguistic_robust_clap" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── DARAG ────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="speech" data-venue="ACL" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ACL 2025</span>
+        <span class="spotlight-badge">Findings</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">Failing Forward: Improving Generative Error Correction for ASR with Synthetic Data and Retrieval Augmentation</div>
+        <div class="paper-row-authors">Ashish Seth, Sreyan Ghosh, Sonal Kumar, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">ASR</span>
+          <span class="tag">Error Correction</span>
+          <span class="tag">Retrieval Augmentation</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        Addresses limitations in generative error correction for speech recognition through the DARAG approach — combining synthetic data augmentation and retrieval-based entity handling for improved domain generalization. The method significantly improves ASR post-correction accuracy in low-resource and domain-shifted settings without requiring additional audio recordings.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2410.13198" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ReCLAP ───────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-text" data-venue="ICASSP" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICASSP 2025</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">ReCLAP: Improving Zero-Shot Audio-Text Retrieval via Retrieval-Augmented Contrastive Learning</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Ramaneswaran S., Sonal Kumar, Ashish Seth, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio-Text</span>
+          <span class="tag">CLAP</span>
+          <span class="tag">Zero-Shot</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        Improves zero-shot audio classification by describing sounds through caption augmentation and custom prompt generation. ReCLAP generates rich, acoustic-attribute-aware descriptions of audio events during training and inference, producing more discriminative audio-text representations that significantly improve zero-shot performance on sound classification and retrieval benchmarks.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/pdf/2409.09213" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/Sreyan88/ReCLA" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TSPE ─────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-text" data-venue="ICASSP" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICASSP 2025</span>
+        <span class="spotlight-badge">SALMA</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">TSPE: Task-Specific Prompt Ensemble for Improved Zero-Shot Audio Classification</div>
+        <div class="paper-row-authors">Nishit Anand, Sonal Kumar, Sreyan Ghosh, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Speaker Extraction</span>
+          <span class="tag">Audio-Text</span>
+          <span class="tag">Speech</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A training-free approach that generates context-rich prompts incorporating sound attributes and sources for improved audio-text alignment and zero-shot audio classification. TSPE constructs task-specific prompt ensembles at inference time, requiring no additional training while achieving consistent improvements over single-prompt baselines across diverse audio classification benchmarks.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2501.00398" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/nishitanand/TSPE" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Synthio ──────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="data" data-venue="ICLR" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICLR 2025</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">Synthio: Augmenting Small-Scale Audio Classification Datasets with Synthetic Data</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Sonal Kumar, Ashish Seth, Chandra Kiran Evuru, Utkarsh Tyagi, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Data Augmentation</span>
+          <span class="tag">Synthesis</span>
+          <span class="tag">Low-Resource</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        Generates synthetic audio data through preference-optimized text-to-audio models and iterative LLM prompting. Synthio produces diverse, acoustically varied training examples that achieve up to 39% performance improvement on small-scale audio classification datasets, providing a scalable solution for low-resource audio understanding without manual data collection.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/pdf/2410.02056" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/Sreyan88/Synthio" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SILA ─────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="data" data-venue="WASPAA" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">WASPAA 2025</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">SILA: Signal-to-Language Augmentation for Enhanced Control in Text-to-Audio Generation</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Sonal Kumar, Ashish Seth, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Continual Learning</span>
+          <span class="tag">Self-Supervised</span>
+          <span class="tag">Representation Learning</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        Enables fine-grained control over acoustic characteristics in generated audio through learned disentanglement between semantic content and acoustic features. SILA augments text-to-audio generation models with signal-level conditioning, allowing precise specification of acoustic properties — timbre, reverberation, recording environment — independently of the sound event content.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2412.09789" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CompA ────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-text" data-venue="ICLR" data-year="2024" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICLR 2024</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">CompA: Addressing the Gap in Compositional Reasoning in Audio-Language Models</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Ashish Seth, Sonal Kumar, Utkarsh Tyagi, Chandra Kiran Evuru, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Compositional Reasoning</span>
+          <span class="tag">Benchmarks</span>
+          <span class="tag">Audio-Language</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        CompA (Compositional Evaluation of Audio-Language Models) benchmarks the compositional understanding of audio-language models through attribute binding, order sensitivity, and multi-event reasoning. It reveals that current models struggle significantly with compositional audio descriptions — failing to correctly bind attributes to the right sound sources or reason about temporal ordering of events. CompA provides both a benchmark and targeted training signal to address these compositional gaps.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/pdf/2310.08753" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/Sreyan88/CompA" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SLICER ───────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="ssl" data-venue="ICASSP" data-year="2023" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICASSP 2023</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">SLICER: Symmetrical Learning of Instance and Cluster-level Efficient Representations for Audio</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Ashish Seth, Chandra Kiran Evuru, Sonal Kumar, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Self-Supervised Learning</span>
+          <span class="tag">Contrastive</span>
+          <span class="tag">Audio Representation</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A self-supervised audio learning approach combining clustering and contrastive learning with a symmetric loss for audio encoder pre-training. SLICER jointly optimizes instance-level discrimination and cluster-level consistency, producing representations that transfer well across environmental sound, music, and speech classification tasks with limited labeled data.
+      </div>
+      <div class="paper-links">
+        <a href="https://ieeexplore.ieee.org/abstract/document/10096970" class="paper-link" target="_blank" rel="noopener">Paper</a>
+        <a href="https://github.com/Sreyan88/audio-ssl" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MAST ─────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="ssl" data-venue="preprint" data-year="other" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">MAST: Multiscale Audio Spectrogram Transformers</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Ashish Seth, Sonal Kumar, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Self-Supervised Learning</span>
+          <span class="tag">Transformers</span>
+          <span class="tag">Pre-training</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        An audio encoder incorporating multiscale feature hierarchies into the Audio Spectrogram Transformer, achieving a 3.4% accuracy gain over single-scale baselines. MAST captures both fine-grained acoustic detail and broad spectral structure through parallel multi-resolution attention paths, producing richer representations for downstream audio classification and retrieval.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/pdf/2211.01515" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/Sreyan88/LAPE" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Stable Distillation ──────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="domain" data-venue="preprint" data-year="other" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">Stable Distillation: Regularizing Continued Pre-training for Low-Resource Automatic Speech Recognition</div>
+        <div class="paper-row-authors">Ashish Seth, Sreyan Ghosh, Sonal Kumar, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Knowledge Distillation</span>
+          <span class="tag">Domain Adaptation</span>
+          <span class="tag">ASR</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A self-distillation approach for continued SSL pre-training that adapts large pre-trained models to low-resource ASR domains. By regularizing the adaptation process with a stable teacher signal, Stable Distillation achieves 0.8–7% WER improvements over naive continued pre-training while avoiding catastrophic forgetting of the original pre-trained representations.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2312.12783" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/cs20s030/stable_distillation" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FusDom ───────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="domain" data-venue="preprint" data-year="other" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">FusDom: Combining In-Domain and Out-of-Domain Knowledge for Continuous Self-Supervised Learning</div>
+        <div class="paper-row-authors">Ashish Seth, Sreyan Ghosh, Sonal Kumar, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Domain Adaptation</span>
+          <span class="tag">Self-Supervised</span>
+          <span class="tag">Continual Learning</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        Continued pre-training approach using teacher-student models with cross-attention for domain adaptation without catastrophic forgetting. FusDom combines in-domain and out-of-domain knowledge through a dual-stream architecture, enabling consistent performance gains across diverse acoustic environments when adapting pre-trained audio models to new domains without requiring target domain labels.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2312.13026" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/cs20s030/fusdom" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── Footer ─────────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">GAMMA<span>Lab</span></div>
+      <p class="footer-desc">
+        Audio General Intelligence research at the University of Maryland,
+        Department of Computer Science. Led by Prof. Dinesh Manocha.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Research</h4>
+      <ul>
+        <li><a href="research.html">All Publications</a></li>
+        <li><a href="research.html?theme=audio-llm">Audio-Language Models</a></li>
+        <li><a href="research.html?theme=benchmarks">Benchmarks</a></li>
+        <li><a href="https://github.com/Sakshi113/mmau" target="_blank" rel="noopener">MMAU Leaderboard ↗</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="people.html">Team</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="https://www.cs.umd.edu/" target="_blank" rel="noopener">UMD CS ↗</a></li>
+        <li><a href="https://www.cs.umd.edu/people/dmanocha" target="_blank" rel="noopener">Prof. Manocha ↗</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 GAMMA Lab, University of Maryland.</p>
+    <p>Department of Computer Science · College Park, MD</p>
+  </div>
+</footer>
+
+<script src="js/theme.js"></script>
+<script src="js/filter.js"></script>
+<script src="js/reveal.js"></script>
+
+</body>
+</html>

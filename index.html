@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAMMA Lab — Audio General Intelligence · University of Maryland</title>
+  <meta name="description" content="GAMMA Lab at UMD builds open AI systems that listen, understand, and reason about all sound — speech, music, and the acoustic world.">
+
+  <!-- Prevent theme flash -->
+  <script>
+    (function(){var t=localStorage.getItem('gamma-theme');if(!t)t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);})();
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────────────── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <a href="index.html" class="nav-logo">GAMMA<span>Lab</span></a>
+      <div class="nav-sep" aria-hidden="true"></div>
+      <a href="https://www.cs.umd.edu/" class="nav-umd" target="_blank" rel="noopener">University of Maryland</a>
+    </div>
+    <div class="nav-right">
+      <a href="research.html" class="nav-link">Research</a>
+      <a href="people.html"   class="nav-link">People</a>
+      <a href="index.html#updates" class="nav-link">Updates</a>
+      <a href="events.html"  class="nav-link">Events</a>
+      <button class="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile-menu" aria-label="Mobile navigation">
+    <a href="research.html" class="nav-link">Research</a>
+    <a href="people.html"   class="nav-link">People</a>
+    <a href="index.html#updates" class="nav-link">Updates</a>
+    <a href="events.html"  class="nav-link">Events</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ── Hero ───────────────────────────────────────────────────── -->
+<section class="hero" aria-label="Introduction">
+  <div class="hero-text">
+    <span class="hero-overline">Audio General Intelligence</span>
+    <h1 class="hero-title serif">
+      <strong>Open models</strong> that listen,
+      <em>understand</em>, and reason about
+      <strong>all&nbsp;sound</strong>
+    </h1>
+    <p class="hero-desc">
+      GAMMA Lab at the University of Maryland builds AI systems that reason deeply
+      about speech, music, and the acoustic world — developing open benchmarks,
+      models, and methods that advance the science of auditory intelligence.
+    </p>
+    <div class="hero-actions">
+      <a href="research.html" class="action-pill primary">Explore research</a>
+      <a href="https://arxiv.org/abs/2507.08128" class="action-pill" target="_blank" rel="noopener">Audio Flamingo 3 ↗</a>
+      <a href="https://arxiv.org/pdf/2410.19168" class="action-pill" target="_blank" rel="noopener">MMAU Benchmark ↗</a>
+    </div>
+  </div>
+  <div class="hero-canvas-wrap" aria-hidden="true">
+    <canvas id="hero-canvas"></canvas>
+  </div>
+</section>
+
+<!-- ── Mission ────────────────────────────────────────────────── -->
+<section id="mission" aria-labelledby="mission-label">
+  <div class="container">
+    <span class="section-label" id="mission-label">Our Mission</span>
+    <div class="mission-grid reveal">
+
+      <div class="mission-primary">
+        <p class="mission-lede serif">
+          Audio General Intelligence — the capacity of AI agents to deeply understand and reason
+          about all types of auditory input, including speech, environmental sounds, and music —
+          is crucial for enabling AI to interact seamlessly and naturally with our world.
+        </p>
+        <p class="mission-body">
+          Despite this importance, audio intelligence has traditionally lagged behind advancements
+          in vision and language processing. This gap arises from significant challenges: limited
+          datasets, the complexity of audio signals, and a shortage of advanced neural architectures
+          and effective training methodologies tailored specifically for audio. Recent breakthroughs
+          in Large Language Models have begun to transform the landscape — offering promising
+          pathways to enhance foundational audio tasks like ASR, cross-modal retrieval, and audio
+          captioning, while giving emergence to new tasks like complex Audio Question Answering.
+        </p>
+      </div>
+
+      <div class="mission-secondary">
+        <p class="mission-body">
+          At GAMMA Lab, our mission is to accelerate progress toward Audio General Intelligence
+          through open and accessible innovation. Our flagship models — GAMA, Audio Flamingo 2,
+          and Audio Flamingo 3 — feature specialized architectures, optimized audio encoders, and
+          meticulously curated alignment datasets. These models excel in complex reasoning,
+          audio understanding, and minimizing hallucinations, setting new benchmarks across the field.
+        </p>
+        <p class="mission-body">
+          Looking ahead, we are extending the Audio Flamingo models to handle longer-duration audio
+          and integrating multimodal capabilities to interpret visual information alongside auditory
+          inputs, enabling sophisticated reasoning over extensive video content. Through open-source
+          models, advanced synthetic data frameworks such as Synthio, and rigorous evaluation
+          benchmarks like MMAU, GAMMA Lab fosters community engagement, transparency, and
+          collaboration — ensuring audio intelligence technologies remain inclusive, impactful, and
+          accessible to researchers and practitioners worldwide.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Flagship research ───────────────────────────────────────── -->
+<section id="research" aria-labelledby="flagship-label">
+  <div class="container">
+    <span class="section-label" id="flagship-label">Flagship Research</span>
+    <div class="flagship-grid stagger-children">
+
+      <a href="https://arxiv.org/abs/2507.08128" target="_blank" rel="noopener" class="paper-card">
+        <div class="badge-row">
+          <span class="venue-badge">NeurIPS 2025</span>
+          <span class="spotlight-badge">Spotlight</span>
+        </div>
+        <div class="paper-card-title serif">Audio Flamingo 3: Advancing Audio Intelligence with Long-Context Reasoning and Multi-Turn Dialogue</div>
+        <div class="badge-row">
+          <span class="tag">Audio LLMs</span>
+          <span class="tag">Reasoning</span>
+        </div>
+        <div class="paper-card-bottom">
+          <span class="paper-card-meta">Ghosh, Kumar et al.</span>
+          <span class="paper-card-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="https://arxiv.org/abs/2503.03983" target="_blank" rel="noopener" class="paper-card">
+        <div class="badge-row">
+          <span class="venue-badge">ICML 2025</span>
+        </div>
+        <div class="paper-card-title serif">Audio Flamingo 2: An Audio-Language Model with Few-Shot Cross-Modal Capabilities</div>
+        <div class="badge-row">
+          <span class="tag">Audio LLMs</span>
+          <span class="tag">Few-Shot</span>
+        </div>
+        <div class="paper-card-bottom">
+          <span class="paper-card-meta">Ghosh, Kumar et al.</span>
+          <span class="paper-card-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="https://arxiv.org/pdf/2410.19168" target="_blank" rel="noopener" class="paper-card">
+        <div class="badge-row">
+          <span class="venue-badge">ICLR 2025</span>
+          <span class="spotlight-badge">Spotlight</span>
+        </div>
+        <div class="paper-card-title serif">MMAU: A Massive Multitask Audio Understanding Benchmark</div>
+        <div class="badge-row">
+          <span class="tag">Benchmarks</span>
+          <span class="tag">Evaluation</span>
+        </div>
+        <div class="paper-card-bottom">
+          <span class="paper-card-meta">Sakshi, Tyagi et al.</span>
+          <span class="paper-card-arrow">→</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Research areas ─────────────────────────────────────────── -->
+<section aria-labelledby="areas-label">
+  <div class="container">
+    <span class="section-label" id="areas-label">Research Areas</span>
+    <div class="areas-grid stagger-children">
+
+      <a href="research.html?theme=audio-llm" class="area-cell">
+        <div class="area-icon">◈</div>
+        <div class="area-name">Audio-Language Models</div>
+        <div class="area-papers">GAMA · AF2 · AF3</div>
+      </a>
+
+      <a href="research.html?theme=benchmarks" class="area-cell">
+        <div class="area-icon">◎</div>
+        <div class="area-name">Benchmarks &amp; Evaluation</div>
+        <div class="area-papers">MMAU · MMAU-Pro · CompA</div>
+      </a>
+
+      <a href="research.html?theme=audio-text" class="area-cell">
+        <div class="area-icon">⊞</div>
+        <div class="area-name">Audio-Text Alignment</div>
+        <div class="area-papers">ReCLAP · PAT · RobustCLAP · TSPE</div>
+      </a>
+
+      <a href="research.html?theme=ssl" class="area-cell">
+        <div class="area-icon">⊡</div>
+        <div class="area-name">Self-Supervised Learning</div>
+        <div class="area-papers">EH-MAM · SLICER · MAST</div>
+      </a>
+
+      <a href="research.html?theme=speech" class="area-cell">
+        <div class="area-icon">◉</div>
+        <div class="area-name">Speech Enhancement &amp; ASR</div>
+        <div class="area-papers">ProSE · DARAG</div>
+      </a>
+
+      <a href="research.html?theme=data" class="area-cell">
+        <div class="area-icon">⊛</div>
+        <div class="area-name">Data &amp; Augmentation</div>
+        <div class="area-papers">Synthio · SILA</div>
+      </a>
+
+      <a href="research.html?theme=domain" class="area-cell">
+        <div class="area-icon">⊜</div>
+        <div class="area-name">Domain Adaptation</div>
+        <div class="area-papers">FusDom · Stable Distillation</div>
+      </a>
+
+      <a href="research.html?theme=multimodal" class="area-cell">
+        <div class="area-icon">⊝</div>
+        <div class="area-name">Multimodal Interaction</div>
+        <div class="area-papers">MultiVox · EgoIllusion</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Updates ────────────────────────────────────────────────── -->
+<section id="updates" aria-labelledby="updates-label">
+  <div class="container">
+    <span class="section-label" id="updates-label">Updates</span>
+    <div class="timeline reveal">
+
+      <div class="timeline-item">
+        <span class="timeline-date">Dec 2025</span>
+        <div class="timeline-content">
+          <a href="https://arxiv.org/abs/2507.10859" target="_blank" rel="noopener">MultiVox</a>
+          accepted as <strong>Oral</strong> at <span class="venue-badge">EMNLP 2025</span>
+          — multimodal dialogue over audio-visual content.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">Nov 2025</span>
+        <div class="timeline-content">
+          <a href="https://arxiv.org/abs/2507.08128" target="_blank" rel="noopener">Audio Flamingo 3</a>
+          selected as <strong>Spotlight</strong> at <span class="venue-badge">NeurIPS 2025</span>.
+          New state-of-the-art on MMAU and Air-Bench.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">Oct 2025</span>
+        <div class="timeline-content">
+          <a href="https://arxiv.org/pdf/2410.13179" target="_blank" rel="noopener">EH-MAM</a>
+          accepted as <strong>Oral</strong> at <span class="venue-badge">EMNLP 2025</span>
+          — hierarchical masked audio modeling for self-supervised pre-training.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">Sep 2025</span>
+        <div class="timeline-content">
+          Three papers at <span class="venue-badge">NAACL 2025</span>:
+          <a href="https://openreview.net/pdf?id=7lAoYRrEcw" target="_blank" rel="noopener">ProSE</a> (Oral),
+          <a href="https://arxiv.org/pdf/2410.15062" target="_blank" rel="noopener">PAT</a> (Oral), and
+          <a href="https://arxiv.org/pdf/2410.16505" target="_blank" rel="noopener">RobustCLAP</a>.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">Jul 2025</span>
+        <div class="timeline-content">
+          <a href="https://arxiv.org/abs/2503.03983" target="_blank" rel="noopener">Audio Flamingo 2</a>
+          accepted to <span class="venue-badge">ICML 2025</span>.
+          Strong few-shot performance across speech, music, and environmental sound.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">Jun 2025</span>
+        <div class="timeline-content">
+          <a href="https://arxiv.org/abs/2410.13198" target="_blank" rel="noopener">DARAG</a>
+          accepted to <span class="venue-badge">ACL 2025</span> (Findings)
+          — retrieval-augmented data generation for low-resource ASR.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">May 2025</span>
+        <div class="timeline-content">
+          <a href="https://arxiv.org/pdf/2410.19168" target="_blank" rel="noopener">MMAU</a>
+          accepted as <strong>Spotlight</strong> at <span class="venue-badge">ICLR 2025</span>,
+          and <a href="https://arxiv.org/pdf/2410.02056" target="_blank" rel="noopener">Synthio</a>
+          also accepted at ICLR 2025.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">Apr 2025</span>
+        <div class="timeline-content">
+          GAMMA Lab organized the
+          <a href="https://salmaworkshop.github.io/" target="_blank" rel="noopener">SALMA Workshop</a>
+          at <span class="venue-badge">ICASSP 2025</span>, Hyderabad.
+          <a href="https://arxiv.org/pdf/2409.09213" target="_blank" rel="noopener">ReCLAP</a> and
+          <a href="https://arxiv.org/abs/2501.00398" target="_blank" rel="noopener">TSPE</a> also presented.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">Nov 2024</span>
+        <div class="timeline-content">
+          <a href="https://arxiv.org/abs/2406.11768" target="_blank" rel="noopener">GAMA</a>
+          accepted as <strong>Oral</strong> at <span class="venue-badge">EMNLP 2024</span>
+          — general-purpose audio understanding via instruction-tuned LLMs.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Team teaser ─────────────────────────────────────────────── -->
+<section id="people" aria-labelledby="team-label">
+  <div class="container">
+    <span class="section-label" id="team-label">The Team</span>
+    <div class="team-chips stagger-children">
+
+      <a href="https://www.cs.umd.edu/people/dmanocha" target="_blank" rel="noopener" class="person-chip pi">
+        <img src="https://sakshi113.github.io/audio_webpage/people/dinesh.jpg"
+             alt="Prof. Dinesh Manocha" class="chip-avatar" loading="lazy">
+        Prof. Dinesh Manocha
+      </a>
+
+      <a href="https://sakshi113.github.io/" target="_blank" rel="noopener" class="person-chip">
+        <img src="https://sakshi113.github.io/audio_webpage/people/sakshi-sf2.jpeg"
+             alt="Sakshi" class="chip-avatar" loading="lazy">
+        Sakshi
+      </a>
+
+      <a href="https://sreyan88.github.io/research/" target="_blank" rel="noopener" class="person-chip">
+        <img src="https://sakshi113.github.io/audio_webpage/people/sreyan-2.jpg"
+             alt="Sreyan Ghosh" class="chip-avatar" loading="lazy">
+        Sreyan Ghosh
+      </a>
+
+      <a href="https://sonalkum.github.io" target="_blank" rel="noopener" class="person-chip">
+        <img src="https://sakshi113.github.io/audio_webpage/people/sonal.png"
+             alt="Sonal Kumar" class="chip-avatar" loading="lazy">
+        Sonal Kumar
+      </a>
+
+      <a href="https://cs20s030.github.io/" target="_blank" rel="noopener" class="person-chip">
+        <img src="https://sakshi113.github.io/audio_webpage/people/ashish.jpeg"
+             alt="Ashish Seth" class="chip-avatar" loading="lazy">
+        Ashish Seth
+      </a>
+
+      <a href="https://nishitanand.github.io/" target="_blank" rel="noopener" class="person-chip">
+        <img src="https://sakshi113.github.io/audio_webpage/people/nishit.jpg"
+             alt="Nishit Anand" class="chip-avatar" loading="lazy">
+        Nishit Anand
+      </a>
+
+      <a href="https://ramaneswaran.github.io/" target="_blank" rel="noopener" class="person-chip">
+        <img src="https://sakshi113.github.io/audio_webpage/people/raman.jpg"
+             alt="Ramaneswaran S." class="chip-avatar" loading="lazy">
+        Ramaneswaran S.
+      </a>
+
+      <a href="people.html" class="person-chip more">+5 more →</a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Events ─────────────────────────────────────────────────── -->
+<section id="events" aria-labelledby="events-label">
+  <div class="container">
+    <span class="section-label" id="events-label">Events</span>
+    <div class="timeline reveal">
+
+      <div class="timeline-item">
+        <span class="timeline-date">Oct 2025</span>
+        <div class="timeline-content">
+          <a href="https://dcase.community/challenge2025/index#audio-question-answering" target="_blank" rel="noopener">DCASE 2025 Audio Question Answering Challenge</a>
+          — Workshop, Oct 30–31, Barcelona, Spain.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">Jun 2025</span>
+        <div class="timeline-content">
+          <a href="https://jsalt2025.fit.vut.cz/summer-workshop" target="_blank" rel="noopener">JSALT 2025 Summer Workshop</a>
+          — June 9 – August 1, Brno, Czechia.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">Apr 2025</span>
+        <div class="timeline-content">
+          <a href="https://salmaworkshop.github.io/" target="_blank" rel="noopener">SALMA Workshop @ ICASSP 2025</a>
+          — Sound and Language Multimodal Analysis. April 6–11, Hyderabad, India.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ── Footer ─────────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">GAMMA<span>Lab</span></div>
+      <p class="footer-desc">
+        Audio General Intelligence research at the University of Maryland,
+        Department of Computer Science. Led by Prof. Dinesh Manocha.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Research</h4>
+      <ul>
+        <li><a href="research.html">All Publications</a></li>
+        <li><a href="research.html?theme=audio-llm">Audio-Language Models</a></li>
+        <li><a href="research.html?theme=benchmarks">Benchmarks</a></li>
+        <li><a href="https://github.com/Sakshi113/mmau" target="_blank" rel="noopener">MMAU Leaderboard ↗</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="people.html">Team</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="https://www.cs.umd.edu/" target="_blank" rel="noopener">UMD CS ↗</a></li>
+        <li><a href="https://www.cs.umd.edu/people/dmanocha" target="_blank" rel="noopener">Prof. Manocha ↗</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 GAMMA Lab, University of Maryland.</p>
+    <p>Department of Computer Science · College Park, MD</p>
+  </div>
+</footer>
+
+<!-- ── Scripts ────────────────────────────────────────────────── -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/hero.js"></script>
+<script src="js/reveal.js"></script>
+
+</body>
+</html>
