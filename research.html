@@ -82,6 +82,9 @@
       <button class="filter-pill" data-filter-type="venue" data-filter-value="ICASSP">ICASSP</button>
       <button class="filter-pill" data-filter-type="venue" data-filter-value="AAAI">AAAI</button>
       <button class="filter-pill" data-filter-type="venue" data-filter-value="WASPAA">WASPAA</button>
+      <button class="filter-pill" data-filter-type="venue" data-filter-value="CVPR">CVPR</button>
+      <button class="filter-pill" data-filter-type="venue" data-filter-value="ICCV">ICCV</button>
+      <button class="filter-pill" data-filter-type="venue" data-filter-value="Interspeech">Interspeech</button>
       <button class="filter-pill" data-filter-type="venue" data-filter-value="preprint">Preprint</button>
     </div>
 
@@ -224,6 +227,67 @@
     </div>
   </div>
 
+  <!-- ── Music Flamingo ──────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="ICLR" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICLR 2026</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">Music Flamingo: Scaling Music Understanding in Audio Language Models</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Arushi Goel, Lasha Koroshinadze, Sang-gil Lee, Zhifeng Kong, Joao Felipe Santos, Ramani Duraiswami, Dinesh Manocha, Wei Ping, Mohammad Shoeybi, Bryan Catanzaro</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio LLMs</span>
+          <span class="tag">Music Understanding</span>
+          <span class="tag">Chain-of-Thought</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        An audio-language model designed for deep music understanding, addressing music's dynamic, layered, and information-dense nature. Introduces MF-Skills, a curated dataset spanning harmony, structure, timbre, lyrics, and cultural context, alongside chain-of-thought training (MF-Think) and reinforcement learning. Achieves state-of-the-art results on 10+ music understanding benchmarks, advancing from surface-level recognition toward layered, human-like perception of songs.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2511.10289" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://musicflamingo-nv-umd.github.io/" class="paper-link" target="_blank" rel="noopener">Project</a>
+        <a href="https://huggingface.co/spaces/nvidia/music-flamingo" class="paper-link" target="_blank" rel="noopener">Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAC ──────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-text" data-venue="preprint" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">TAC: Timestamped Audio Captioning</div>
+        <div class="paper-row-authors">Sonal Kumar, Prem Seetharaman, Ke Chen, Oriol Nieto, Jiaqi Su, Zhepei Wang, Rithesh Kumar, Dinesh Manocha, Nicholas J. Bryan, Zeyu Jin, Justin Salamon</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio Captioning</span>
+          <span class="tag">Temporal Grounding</span>
+          <span class="tag">Hallucination</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        Addresses hallucinations and temporal inconsistencies in audio captioning by generating temporally grounded descriptions of complex acoustic scenes. TAC disentangles overlapping sound events and assigns precise timestamps to each, producing more accurate and temporally consistent captions across audio and audio-visual understanding benchmarks.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2602.15766" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://sonalkum.github.io/tacmodel" class="paper-link" target="_blank" rel="noopener">Project</a>
+      </div>
+    </div>
+  </div>
+
   <!-- ── GAMA ─────────────────────────────────────────────────── -->
   <div class="paper-row-wrap" data-theme="audio-llm" data-venue="EMNLP" data-year="2024" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
@@ -316,10 +380,10 @@
   </div>
 
   <!-- ── EH-MAM ───────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="ssl" data-venue="EMNLP" data-year="2025" role="listitem">
+  <div class="paper-row-wrap" data-theme="ssl" data-venue="EMNLP" data-year="2024" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
-        <span class="venue-badge">EMNLP 2025</span>
+        <span class="venue-badge">EMNLP 2024</span>
         <span class="spotlight-badge">Oral</span>
       </div>
       <div class="paper-row-main">
@@ -617,6 +681,97 @@
     </div>
   </div>
 
+  <!-- ── RECAP ───────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-text" data-venue="ICASSP" data-year="2024" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICASSP 2024</span>
+        <span class="spotlight-badge">Oral</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">RECAP: Retrieval-Augmented Audio Captioning</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Sonal Kumar, Chandra Kiran Reddy Evuru, Ramani Duraiswami, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio Captioning</span>
+          <span class="tag">Retrieval Augmentation</span>
+          <span class="tag">Out-of-Domain</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A retrieval-augmented audio captioning system that conditions a GPT-2 decoder on both the input audio and similar captions retrieved from a datastore via CLAP. RECAP achieves competitive in-domain performance and significant out-of-domain improvements, capable of captioning novel audio events unseen during training. Also releases 150,000+ new weakly labeled captions for AudioSet, AudioCaps, and Clotho.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2309.09836" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── AV-RIR ──────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="multimodal" data-venue="CVPR" data-year="2024" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">CVPR 2024</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">AV-RIR: Audio-Visual Room Impulse Response Estimation</div>
+        <div class="paper-row-authors">Anton Ratnarajah, Sreyan Ghosh, Sonal Kumar, Purva Chiniya, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio-Visual</span>
+          <span class="tag">Room Acoustics</span>
+          <span class="tag">Spatial Audio</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A multimodal approach combining audio and visual information for Room Impulse Response (RIR) estimation via a neural codec-based architecture. Introduces Geo-Mat features encoding material properties from visual data, and CRIP, which improves late reverberation components via image-to-RIR retrieval by 86%. Achieves 36–63% improvements over audio-only and visual-only baselines across acoustic metrics.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2312.00834" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://anton-jeran.github.io/AVRIR/" class="paper-link" target="_blank" rel="noopener">Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── LipGER ──────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="speech" data-venue="Interspeech" data-year="2024" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">Interspeech 2024</span>
+        <span class="spotlight-badge">Oral</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">LipGER: Visually-Conditioned Generative Error Correction for Robust Automatic Speech Recognition</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Sonal Kumar, Ashish Seth, Purva Chiniya, Utkarsh Tyagi, Ramani Duraiswami, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">ASR</span>
+          <span class="tag">Error Correction</span>
+          <span class="tag">Audio-Visual</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A framework that leverages lip movement cues to correct ASR errors in noisy environments, instructing a language model to select among N-best hypotheses conditioned on visual lip cues. LipGER achieves word error rate improvements of 1.1–49.2% across four datasets and introduces LipHyp, a large-scale dataset with hypothesis-transcription pairs equipped with lip motion cues.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2406.04432" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/Sreyan88/LipGER" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
   <!-- ── SLICER ───────────────────────────────────────────────── -->
   <div class="paper-row-wrap" data-theme="ssl" data-venue="ICASSP" data-year="2023" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
@@ -647,11 +802,70 @@
     </div>
   </div>
 
-  <!-- ── MAST ─────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="ssl" data-venue="preprint" data-year="other" role="listitem">
+  <!-- ── AdVerb ──────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="multimodal" data-venue="ICCV" data-year="2023" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
-        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
+        <span class="venue-badge">ICCV 2023</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">AdVerb: Visually Guided Audio Dereverberation</div>
+        <div class="paper-row-authors">Sanjoy Chowdhury, Sreyan Ghosh, Subhrajyoti Dasgupta, Anton Ratnarajah, Utkarsh Tyagi, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio-Visual</span>
+          <span class="tag">Dereverberation</span>
+          <span class="tag">Speech Enhancement</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        An audio-visual framework that combines scene images with reverberant audio to recover clean sound via a geometry-aware cross-modal transformer architecture. AdVerb captures scene geometry and audio-visual cross-modal relationships to generate complex ideal ratio masks, achieving 18–82% relative improvements on LibriSpeech for speech enhancement, recognition, and speaker verification.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2308.12370" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MMER ─────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="speech" data-venue="Interspeech" data-year="2023" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">Interspeech 2023</span>
+        <span class="spotlight-badge">Oral</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">MMER: Multimodal Multi-task Learning for Speech Emotion Recognition</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Utkarsh Tyagi, S Ramaneswaran, Harshvardhan Srivastava, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Speech Emotion</span>
+          <span class="tag">Multimodal</span>
+          <span class="tag">Multi-task Learning</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A multimodal network for speech emotion recognition using early-fusion and cross-modal self-attention between text and acoustic modalities, trained jointly on three auxiliary tasks for richer supervision. MMER achieves state-of-the-art results on the IEMOCAP benchmark by jointly leveraging acoustic and linguistic signals.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2203.16794" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MAST ─────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="ssl" data-venue="ICASSP" data-year="2023" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICASSP 2023</span>
       </div>
       <div class="paper-row-main">
         <div class="paper-row-title serif">MAST: Multiscale Audio Spectrogram Transformers</div>
@@ -678,10 +892,10 @@
   </div>
 
   <!-- ── Stable Distillation ──────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="domain" data-venue="preprint" data-year="other" role="listitem">
+  <div class="paper-row-wrap" data-theme="domain" data-venue="ICASSP" data-year="2024" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
-        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
+        <span class="venue-badge">ICASSP 2024</span>
       </div>
       <div class="paper-row-main">
         <div class="paper-row-title serif">Stable Distillation: Regularizing Continued Pre-training for Low-Resource Automatic Speech Recognition</div>
@@ -708,10 +922,10 @@
   </div>
 
   <!-- ── FusDom ───────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="domain" data-venue="preprint" data-year="other" role="listitem">
+  <div class="paper-row-wrap" data-theme="domain" data-venue="ICASSP" data-year="2024" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
-        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
+        <span class="venue-badge">ICASSP 2024</span>
       </div>
       <div class="paper-row-main">
         <div class="paper-row-title serif">FusDom: Combining In-Domain and Out-of-Domain Knowledge for Continuous Self-Supervised Learning</div>
