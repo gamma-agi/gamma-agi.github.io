@@ -424,6 +424,37 @@ section + section { border-top: 1px solid var(--border); }
   gap: 20px;
 }
 
+/* ── Paper marquee (Latest Research section) ──────────────────── */
+.paper-marquee-wrap {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  padding: 8px 0 24px;
+}
+
+.paper-marquee-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  align-items: stretch;
+  animation: paper-pan 40s linear infinite;
+}
+
+.paper-marquee-wrap:hover .paper-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes paper-pan {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+.paper-marquee-card {
+  width: 300px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
 .paper-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
