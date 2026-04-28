@@ -57,16 +57,24 @@
 <div class="filter-bar" role="search" aria-label="Filter publications">
   <div class="filter-inner">
 
+    <div class="filter-search-row">
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><line x1="13" y1="13" x2="18" y2="18"/></svg>
+        <input id="paper-search" class="search-input" type="search" placeholder="Search by title, author, or keyword…" autocomplete="off" spellcheck="false" aria-label="Search papers">
+        <button class="search-clear" id="search-clear" aria-label="Clear search" hidden>✕</button>
+      </div>
+    </div>
+
     <div class="filter-row">
       <span class="filter-label">Theme</span>
       <button class="filter-pill active" data-filter-type="theme" data-filter-value="all">All</button>
-      <button class="filter-pill" data-filter-type="theme" data-filter-value="audio-llm">Audio-Language Models</button>
+      <button class="filter-pill" data-filter-type="theme" data-filter-value="audio-llm">Audio LLMs</button>
       <button class="filter-pill" data-filter-type="theme" data-filter-value="benchmarks">Benchmarks</button>
-      <button class="filter-pill" data-filter-type="theme" data-filter-value="audio-text">Audio-Text Alignment</button>
-      <button class="filter-pill" data-filter-type="theme" data-filter-value="ssl">Self-Supervised Learning</button>
+      <button class="filter-pill" data-filter-type="theme" data-filter-value="audio-text">Audio-Text</button>
+      <button class="filter-pill" data-filter-type="theme" data-filter-value="ssl">Self-Supervised</button>
       <button class="filter-pill" data-filter-type="theme" data-filter-value="speech">Speech &amp; ASR</button>
-      <button class="filter-pill" data-filter-type="theme" data-filter-value="data">Data &amp; Augmentation</button>
-      <button class="filter-pill" data-filter-type="theme" data-filter-value="domain">Domain Adaptation</button>
+      <button class="filter-pill" data-filter-type="theme" data-filter-value="data">Data</button>
+      <button class="filter-pill" data-filter-type="theme" data-filter-value="domain">Domain Adapt.</button>
       <button class="filter-pill" data-filter-type="theme" data-filter-value="multimodal">Multimodal</button>
     </div>
 
@@ -91,6 +99,7 @@
     <div class="filter-row">
       <span class="filter-label">Year</span>
       <button class="filter-pill active" data-filter-type="year" data-filter-value="all">All</button>
+      <button class="filter-pill" data-filter-type="year" data-filter-value="2026">2026</button>
       <button class="filter-pill" data-filter-type="year" data-filter-value="2025">2025</button>
       <button class="filter-pill" data-filter-type="year" data-filter-value="2024">2024</button>
       <button class="filter-pill" data-filter-type="year" data-filter-value="2023">2023</button>
@@ -108,7 +117,7 @@
   </div>
 
   <!-- ── Exploring Audio Hallucination in Egocentric Video ───── -->
-  <div class="paper-row-wrap" data-theme="multimodal" data-venue="ICASSP" data-year="2025" role="listitem">
+  <div class="paper-row-wrap" data-theme="multimodal" data-venue="ICASSP" data-year="2026" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
         <span class="venue-badge">ICASSP 2026</span>
@@ -137,7 +146,7 @@
   </div>
 
   <!-- ── EgoAVU ───────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="multimodal" data-venue="preprint" data-year="2025" role="listitem">
+  <div class="paper-row-wrap" data-theme="multimodal" data-venue="preprint" data-year="2026" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
         <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
@@ -195,7 +204,7 @@
   </div>
 
   <!-- ── Audio Flamingo Next ──────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="preprint" data-year="2025" role="listitem">
+  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="preprint" data-year="2026" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
         <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
@@ -225,7 +234,7 @@
   </div>
 
   <!-- ── MMOU ──────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="benchmarks" data-venue="preprint" data-year="2025" role="listitem">
+  <div class="paper-row-wrap" data-theme="benchmarks" data-venue="preprint" data-year="2026" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
         <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
@@ -255,7 +264,7 @@
   </div>
 
   <!-- ── Video-Robin ───────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="multimodal" data-venue="preprint" data-year="2025" role="listitem">
+  <div class="paper-row-wrap" data-theme="multimodal" data-venue="preprint" data-year="2026" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
         <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
@@ -284,7 +293,7 @@
   </div>
 
   <!-- ── AHA ───────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="preprint" data-year="2025" role="listitem">
+  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="preprint" data-year="2026" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
         <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
