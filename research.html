@@ -116,7 +116,7 @@
     No papers match the selected filters.
   </div>
 
-    <!-- ── Exploring Audio Hallucination in Egocentric Video ───── -->
+      <!-- ── Exploring Audio Hallucination in Egocentric Video ───── -->
   <div class="paper-row-wrap" data-theme="multimodal" data-venue="ICASSP" data-year="2026" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
@@ -145,19 +145,19 @@
     </div>
   </div>
 
-  <!-- ── EgoAVU ───────────────────────────────────────────────── -->
+  <!-- ── Video-Robin ───────────────────────────────────────────── -->
   <div class="paper-row-wrap" data-theme="multimodal" data-venue="preprint" data-year="2026" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
         <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
       </div>
       <div class="paper-row-main">
-        <div class="paper-row-title serif">EgoAVU: Egocentric Audio-Visual Understanding</div>
-        <div class="paper-row-authors">Ashish Seth, Xinhao Mei, Changsheng Zhao, Varun Nagaraja, Ernie Chang, Gregory P. Meyer, Gael Le Lan, Yunyang Xiong, Vikas Chandra, Yangyang Shi, Dinesh Manocha, Zhipeng Cai</div>
+        <div class="paper-row-title serif">Video-Robin: Autoregressive Diffusion Planning for Intent-Grounded Video-to-Music Generation</div>
+        <div class="paper-row-authors">Vaibhavi Lokegaonkar, Aryan Vijay Bhosale, Vishnu Raj, Gouthaman KV, Ramani Duraiswami, Lie Lu, Sreyan Ghosh, Dinesh Manocha</div>
         <div class="paper-row-tags">
+          <span class="tag">Video-to-Music</span>
+          <span class="tag">Generation</span>
           <span class="tag">Multimodal</span>
-          <span class="tag">Egocentric Video</span>
-          <span class="tag">Audio-Visual</span>
         </div>
       </div>
       <div class="paper-row-chevron">
@@ -166,10 +166,10 @@
     </div>
     <div class="paper-expand">
       <div class="paper-abstract">
-        A dataset and benchmark for joint audio-visual understanding of egocentric videos. A data generation pipeline using token-based video filtering and modular graph-based curation produces 3 million audio-visual training samples. Existing MLLMs are shown to bias heavily toward visual signals, often neglecting audio cues. Fine-tuning on the resulting dataset yields up to 113% performance improvement on the EgoAVU benchmark and up to 28% relative gains on other egocentric video benchmarks.
+        A text-conditioned video-to-music generation model that enables fast, high-quality, semantically and stylistically controllable background music creation. Video-Robin uses an autoregressive module to align visual and textual inputs for high-level musical planning, followed by Diffusion Transformers that refine the plan into high-quality audio. The dual-component architecture achieves superior performance over existing approaches on standard and challenging test sets with significantly faster inference speeds.
       </div>
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2602.06139" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://arxiv.org/abs/2604.17656" class="paper-link" target="_blank" rel="noopener">arXiv</a>
       </div>
     </div>
   </div>
@@ -204,6 +204,35 @@
     </div>
   </div>
 
+  <!-- ── AHA ───────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="preprint" data-year="2026" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">Audio Hallucination Attacks: Probing the Reliability of Large Audio Language Models</div>
+        <div class="paper-row-authors">Ashish Seth, Sonal Kumar, Ramaneswaran Selvakumar, Nishit Anand, Utkarsh Tyagi, Prem Seetharaman, Ramani Duraiswami, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Hallucination</span>
+          <span class="tag">Robustness</span>
+          <span class="tag">Audio LLMs</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        Introduces AHA-Eval, an attack suite of 6,500 QA pairs that probes whether large audio language models genuinely ground responses in audio input rather than relying on spurious correlations. AHA targets two attack surfaces: query-based attacks that manipulate question structure and audio-based attacks using synthetic speech. Testing reveals alarming vulnerability rates of 95.35% and 79.65% on Audio Flamingo 3 and Gemini Pro respectively. A mitigation dataset is also proposed, reducing attack success rates by up to 49%.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2603.29263" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
   <!-- ── MMOU ──────────────────────────────────────────────────── -->
   <div class="paper-row-wrap" data-theme="benchmarks" data-venue="preprint" data-year="2026" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
@@ -234,19 +263,49 @@
     </div>
   </div>
 
-  <!-- ── Video-Robin ───────────────────────────────────────────── -->
+  <!-- ── TAC ──────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-text" data-venue="preprint" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">TAC: Timestamped Audio Captioning</div>
+        <div class="paper-row-authors">Sonal Kumar, Prem Seetharaman, Ke Chen, Oriol Nieto, Jiaqi Su, Zhepei Wang, Rithesh Kumar, Dinesh Manocha, Nicholas J. Bryan, Zeyu Jin, Justin Salamon</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio Captioning</span>
+          <span class="tag">Temporal Grounding</span>
+          <span class="tag">Hallucination</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        Addresses hallucinations and temporal inconsistencies in audio captioning by generating temporally grounded descriptions of complex acoustic scenes. TAC disentangles overlapping sound events and assigns precise timestamps to each, producing more accurate and temporally consistent captions across audio and audio-visual understanding benchmarks.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2602.15766" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://sonalkum.github.io/tacmodel" class="paper-link" target="_blank" rel="noopener">Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── EgoAVU ───────────────────────────────────────────────── -->
   <div class="paper-row-wrap" data-theme="multimodal" data-venue="preprint" data-year="2026" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
         <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
       </div>
       <div class="paper-row-main">
-        <div class="paper-row-title serif">Video-Robin: Autoregressive Diffusion Planning for Intent-Grounded Video-to-Music Generation</div>
-        <div class="paper-row-authors">Vaibhavi Lokegaonkar, Aryan Vijay Bhosale, Vishnu Raj, Gouthaman KV, Ramani Duraiswami, Lie Lu, Sreyan Ghosh, Dinesh Manocha</div>
+        <div class="paper-row-title serif">EgoAVU: Egocentric Audio-Visual Understanding</div>
+        <div class="paper-row-authors">Ashish Seth, Xinhao Mei, Changsheng Zhao, Varun Nagaraja, Ernie Chang, Gregory P. Meyer, Gael Le Lan, Yunyang Xiong, Vikas Chandra, Yangyang Shi, Dinesh Manocha, Zhipeng Cai</div>
         <div class="paper-row-tags">
-          <span class="tag">Video-to-Music</span>
-          <span class="tag">Generation</span>
           <span class="tag">Multimodal</span>
+          <span class="tag">Egocentric Video</span>
+          <span class="tag">Audio-Visual</span>
         </div>
       </div>
       <div class="paper-row-chevron">
@@ -255,27 +314,58 @@
     </div>
     <div class="paper-expand">
       <div class="paper-abstract">
-        A text-conditioned video-to-music generation model that enables fast, high-quality, semantically and stylistically controllable background music creation. Video-Robin uses an autoregressive module to align visual and textual inputs for high-level musical planning, followed by Diffusion Transformers that refine the plan into high-quality audio. The dual-component architecture achieves superior performance over existing approaches on standard and challenging test sets with significantly faster inference speeds.
+        A dataset and benchmark for joint audio-visual understanding of egocentric videos. A data generation pipeline using token-based video filtering and modular graph-based curation produces 3 million audio-visual training samples. Existing MLLMs are shown to bias heavily toward visual signals, often neglecting audio cues. Fine-tuning on the resulting dataset yields up to 113% performance improvement on the EgoAVU benchmark and up to 28% relative gains on other egocentric video benchmarks.
       </div>
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2604.17656" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://arxiv.org/abs/2602.06139" class="paper-link" target="_blank" rel="noopener">arXiv</a>
       </div>
     </div>
   </div>
 
-  <!-- ── AHA ───────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="preprint" data-year="2026" role="listitem">
+  <!-- ── Music Flamingo ──────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="ICLR" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICLR 2026</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">Music Flamingo: Scaling Music Understanding in Audio Language Models</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Arushi Goel, Lasha Koroshinadze, Sang-gil Lee, Zhifeng Kong, Joao Felipe Santos, Ramani Duraiswami, Dinesh Manocha, Wei Ping, Mohammad Shoeybi, Bryan Catanzaro</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio LLMs</span>
+          <span class="tag">Music Understanding</span>
+          <span class="tag">Chain-of-Thought</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        An audio-language model designed for deep music understanding, addressing music's dynamic, layered, and information-dense nature. Introduces MF-Skills, a curated dataset spanning harmony, structure, timbre, lyrics, and cultural context, alongside chain-of-thought training (MF-Think) and reinforcement learning. Achieves state-of-the-art results on 10+ music understanding benchmarks, advancing from surface-level recognition toward layered, human-like perception of songs.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2511.10289" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://musicflamingo-nv-umd.github.io/" class="paper-link" target="_blank" rel="noopener">Project</a>
+        <a href="https://huggingface.co/spaces/nvidia/music-flamingo" class="paper-link" target="_blank" rel="noopener">Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SPUR ─────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="preprint" data-year="2025" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
         <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
       </div>
       <div class="paper-row-main">
-        <div class="paper-row-title serif">Audio Hallucination Attacks: Probing the Reliability of Large Audio Language Models</div>
-        <div class="paper-row-authors">Ashish Seth, Sonal Kumar, Ramaneswaran Selvakumar, Nishit Anand, Utkarsh Tyagi, Prem Seetharaman, Ramani Duraiswami, Dinesh Manocha</div>
+        <div class="paper-row-title serif">SPUR: A Plug-and-Play Framework for Integrating Spatial Audio Understanding and Reasoning into Large Audio-Language Models</div>
+        <div class="paper-row-authors">S Sakshi, Vaibhavi Lokegaonkar, Neil Zhang, Ramani Duraiswami, Sreyan Ghosh, Dinesh Manocha, Lie Lu</div>
         <div class="paper-row-tags">
-          <span class="tag">Hallucination</span>
-          <span class="tag">Robustness</span>
+          <span class="tag">Spatial Audio</span>
           <span class="tag">Audio LLMs</span>
+          <span class="tag">Reasoning</span>
         </div>
       </div>
       <div class="paper-row-chevron">
@@ -284,10 +374,394 @@
     </div>
     <div class="paper-expand">
       <div class="paper-abstract">
-        Introduces AHA-Eval, an attack suite of 6,500 QA pairs that probes whether large audio language models genuinely ground responses in audio input rather than relying on spurious correlations. AHA targets two attack surfaces: query-based attacks that manipulate question structure and audio-based attacks using synthetic speech. Testing reveals alarming vulnerability rates of 95.35% and 79.65% on Audio Flamingo 3 and Gemini Pro respectively. A mitigation dataset is also proposed, reducing attack success rates by up to 49%.
+        A lightweight plug-and-play framework for endowing large audio-language models with spatial audio understanding and reasoning. SPUR incorporates a First-Order Ambisonics encoder for processing directional audio channels and introduces SPUR-Set, a dataset for training spatial reasoning capabilities. The approach preserves existing model functionality while enabling detection of sound direction, elevation, distance, and speaker attribution in real-world acoustic environments.
       </div>
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2603.29263" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://arxiv.org/abs/2511.06606" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://sakshi113.github.io/spur/" class="paper-link" target="_blank" rel="noopener">Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── OmniVinci ────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="multimodal" data-venue="ICLR" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICLR 2026</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM</div>
+        <div class="paper-row-authors">Hanrong Ye, Chao-Han Huck Yang, Arushi Goel, Wei Huang, Ligeng Zhu, Yuanhang Su, Sean Lin, An-Chieh Cheng, Zhen Wan, Jinchuan Tian, Yuming Lou, Dong Yang, Zhijian Liu, Yukang Chen, Ambrish Dantrey, Ehsan Jahangiri, Sreyan Ghosh, Daguang Xu, Ehsan Hosseini-Asl, Danial Mohseni Taheri, Vidya Murali, Sifei Liu, Yao Lu, Oluwatobi Olabiyi, Yu-Chiang Frank Wang, Rafael Valle, Bryan Catanzaro, Andrew Tao, Song Han, Jan Kautz, Hongxu Yin, Pavlo Molchanov</div>
+        <div class="paper-row-tags">
+          <span class="tag">Multimodal</span>
+          <span class="tag">Omni-Modal</span>
+          <span class="tag">LLM</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        An omni-modal large language model with enhanced architecture and training data for unified understanding across text, image, audio, and video modalities. OmniVinci introduces architectural improvements and curated multi-modal datasets to achieve strong performance on diverse omni-modal understanding benchmarks.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2510.15870" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── UALM ───────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="ICLR" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICLR 2026</span>
+        <span class="spotlight-badge">Oral</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">UALM: Unified Audio Language Model for Understanding, Generation and Reasoning</div>
+        <div class="paper-row-authors">Jinchuan Tian, Sang-gil Lee, Zhifeng Kong, Sreyan Ghosh, Arushi Goel, Chao-Han Huck Yang, Wenliang Dai, Zihan Liu, Hanrong Ye, Shinji Watanabe, Mohammad Shoeybi, Bryan Catanzaro, Rafael Valle, Wei Ping</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio LLMs</span>
+          <span class="tag">Generation</span>
+          <span class="tag">Reasoning</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A unified audio language model that integrates understanding, generation, and reasoning in a single framework. UALM handles diverse audio tasks including speech recognition, audio captioning, sound event detection, and audio generation through a shared model architecture, achieving strong performance across all modalities.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2510.12000" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MMAU-Pro ──────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="benchmarks" data-venue="AAAI" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">AAAI 2026</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">MMAU-Pro: A Challenging and Comprehensive Benchmark for Holistic Evaluation of Audio General Intelligence</div>
+        <div class="paper-row-authors">Sonal Kumar, Šimon Sedláček, Vaibhavi Lokegaonkar, Fernando López, Wenyi Yu, Nishit Anand, Hyeonggon Ryu, Lichang Chen, Maxim Plička, Miroslav Hlaváček, William Fineas Ellingwood, Sathvik Udupa, Siyuan Hou, Allison Ferner, Sara Barahona, Cecilia Bolaños, Satish Rahi, Laura Herrera-Alarcón, Satvik Dixit, Siddhi Patil, Soham Deshmukh, Lasha Koroshinadze, Yao Liu, Leibny Paola Garcia Perera, Eleni Zanou, Themos Stafylakis, Joon Son Chung, David Harwath, Chao Zhang, Dinesh Manocha, Alicia Lozano-Diez, Santosh Kesiraju, Sreyan Ghosh, Ramani Duraiswami</div>
+        <div class="paper-row-tags">
+          <span class="tag">Benchmarks</span>
+          <span class="tag">Evaluation</span>
+          <span class="tag">Reasoning</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A benchmark containing 5,305 instances with audio paired to expert-generated Q&A across speech, sound, and music. Evaluates models on 49 unique skills including long-form comprehension and spatial reasoning. Tests 22 models, revealing limitations where even state-of-the-art systems achieve only 59.2% accuracy — exposing gaps that simpler benchmarks cannot surface.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/pdf/2508.13992" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── EgoIllusion ──────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="multimodal" data-venue="EMNLP" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">EMNLP 2025</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">EGOILLUSION: Benchmarking Hallucinations in Egocentric Video Understanding</div>
+        <div class="paper-row-authors">Ashish Seth, Utkarsh Tyagi, Ramaneswaran Selvakumar, Nishit Anand, Sonal Kumar, Sreyan Ghosh, Ramani Duraiswami, Chirag Agarwal, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Multimodal</span>
+          <span class="tag">Benchmarks</span>
+          <span class="tag">Robustness</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        EgoIllusion investigates how audio-language models can be misled by acoustic illusions within egocentric audio-visual scenarios. Through a novel benchmark of auditory illusion cases in first-person video, we expose systematic failure modes in current models that rely on shallow acoustic cues rather than genuine perceptual reasoning. We further propose mitigation strategies and training interventions for more robust perceptual audio-visual understanding.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2508.12687" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MultiVox ─────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="multimodal" data-venue="EMNLP" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">EMNLP 2025</span>
+        <span class="spotlight-badge">Oral</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">MultiVox: A Benchmark for Evaluating Voice Assistants for Multimodal Interactions</div>
+        <div class="paper-row-authors">Ramaneswaran Selvakumar, Ashish Seth, Nishit Anand, Utkarsh Tyagi, Sonal Kumar, Sreyan Ghosh, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Multimodal</span>
+          <span class="tag">Dialogue</span>
+          <span class="tag">Audio-Visual</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        The first omni voice assistant benchmark, featuring 1,000 annotated dialogues that evaluate the integration of paralinguistic speech features and visual cues for multimodal understanding. MultiVox exposes significant gaps in how current voice assistants handle non-verbal speech cues and visual context simultaneously.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2507.10859" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Audio Flamingo 3 ─────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="NeurIPS" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">NeurIPS 2025</span>
+        <span class="spotlight-badge">Spotlight</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">Audio Flamingo 3: Advancing Audio Intelligence with Fully Open Large Audio Language Models</div>
+        <div class="paper-row-authors">Arushi Goel, Sreyan Ghosh, Jaehyeon Kim, Sonal Kumar, Zhifeng Kong, Sang-gil Lee, Chao-Han Huck Yang, Ramani Duraiswami, Dinesh Manocha, Rafael Valle, Bryan Catanzaro</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio LLMs</span>
+          <span class="tag">Reasoning</span>
+          <span class="tag">Multi-Turn</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A fully open large audio-language model featuring the AF-Whisper unified encoder, flexible thinking capabilities, multi-turn chat, and 10-minute audio understanding. AF3 supports voice-to-voice interaction across speech, sound, and music modalities, setting new state-of-the-art performance on MMAU, Air-Bench, and other major audio understanding benchmarks.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2507.08128" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Multi-Domain Audio QA ────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="benchmarks" data-venue="ICASSP" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICASSP 2026</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">Multi-Domain Audio Question Answering Benchmark Toward Acoustic Content Reasoning</div>
+        <div class="paper-row-authors">Chao-Han Huck Yang, Sreyan Ghosh, Qing Wang, Jaeyeon Kim, Hengyi Hong, Sonal Kumar, Guirui Zhong, Zhifeng Kong, Sakshi, Vaibhavi Lokegaonkar, Oriol Nieto, Ramani Duraiswami, Dinesh Manocha, Gunhee Kim, Jun Du, Rafael Valle, Bryan Catanzaro</div>
+        <div class="paper-row-tags">
+          <span class="tag">Benchmarks</span>
+          <span class="tag">Audio QA</span>
+          <span class="tag">Reasoning</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A multi-domain audio question answering benchmark designed to evaluate acoustic content reasoning across speech, music, and environmental sound. The benchmark tests models on complex reasoning over audio content, requiring understanding of acoustic properties, temporal relationships, and domain-specific knowledge.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2505.07365" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ProSE ────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="speech" data-venue="NAACL" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">NAACL 2025</span>
+        <span class="spotlight-badge">Oral</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">ProSE: Diffusion Priors for Speech Enhancement</div>
+        <div class="paper-row-authors">Sonal Kumar, Sreyan Ghosh, Utkarsh Tyagi, Anton Jeran Ratnarajah, Chandra Kiran Reddy Evuru, Ramani Duraiswami, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Speech Enhancement</span>
+          <span class="tag">Curriculum Learning</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        Proposes a methodology applying diffusion models in latent space to generate priors that are integrated into transformer-based regression for speech enhancement. The diffusion prior captures the full distribution of clean speech, enabling the regression model to produce higher-fidelity enhanced speech with state-of-the-art performance on standard benchmarks.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2503.06375" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/sonalkum/ProSE" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Audio Flamingo 2 ─────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="ICML" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICML 2025</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">Audio Flamingo 2: An Audio-Language Model with Long-Audio Understanding and Expert Reasoning Abilities</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Zhifeng Kong, Sonal Kumar, S Sakshi, Jaehyeon Kim, Wei Ping, Rafael Valle, Dinesh Manocha, Bryan Catanzaro</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio LLMs</span>
+          <span class="tag">Long-Form Audio</span>
+          <span class="tag">Reasoning</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        An audio-language model with a custom CLAP encoder and synthetic QA data, extending understanding to 30-second to 5-minute audio segments. Introduces the LongAudio dataset for long-form audio training, enabling expert-level reasoning over extended audio across speech, music, and environmental sound domains.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2503.03983" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Visual Description Grounding ────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="multimodal" data-venue="ICLR" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICLR 2025</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">Visual Description Grounding Reduces Hallucinations and Boosts Reasoning in LVLMs</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Chandra Kiran Reddy Evuru, Sonal Kumar, Utkarsh Tyagi, Oriol Nieto, Zeyu Jin, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Multimodal</span>
+          <span class="tag">Hallucination</span>
+          <span class="tag">Reasoning</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        Addresses hallucinations in large vision-language models by grounding visual descriptions to specific image regions. The proposed approach reduces object hallucinations and improves compositional reasoning by linking textual descriptions to precise visual evidence, achieving state-of-the-art results on multiple hallucination and visual reasoning benchmarks.
+      </div>
+      <div class="paper-links">
+        <a href="https://openreview.net/forum?id=3PRvlT8b1R" class="paper-link" target="_blank" rel="noopener">OpenReview</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TSPE ─────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-text" data-venue="ICASSP" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICASSP 2025</span>
+        <span class="spotlight-badge">SALMA</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">TSPE: Task-Specific Prompt Ensemble for Improved Zero-Shot Audio Classification</div>
+        <div class="paper-row-authors">Nishit Anand, Ashish Seth, Ramani Duraiswami, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Speaker Extraction</span>
+          <span class="tag">Audio-Text</span>
+          <span class="tag">Speech</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A training-free approach that generates context-rich prompts incorporating sound attributes and sources for improved audio-text alignment and zero-shot audio classification. TSPE constructs task-specific prompt ensembles at inference time, requiring no additional training while achieving consistent improvements over single-prompt baselines across diverse audio classification benchmarks.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2501.00398" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/nishitanand/TSPE" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── HALLUCINOGEN ──────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="multimodal" data-venue="preprint" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">Towards a Systematic Evaluation of Hallucinations in Large-Vision Language Models</div>
+        <div class="paper-row-authors">Ashish Seth, Dinesh Manocha, Chirag Agarwal</div>
+        <div class="paper-row-tags">
+          <span class="tag">Hallucination</span>
+          <span class="tag">Benchmarks</span>
+          <span class="tag">Vision-Language</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        HALLUCINOGEN, a VQA benchmark that uses contextual reasoning prompts as hallucination attacks to systematically evaluate large vision-language models. The framework categorizes visual entities as salient (easily recognizable objects) or latent (requiring domain knowledge, such as identifying disease in X-rays), and evaluates eleven models including LLaMA-3.2, DeepSeek-V2, and Gemini. Results show current LVLMs remain susceptible to hallucination attacks even with existing mitigation strategies.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2412.20622" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SILA ─────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="data" data-venue="WASPAA" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">WASPAA 2025</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">SILA: Signal-to-Language Augmentation for Enhanced Control in Text-to-Audio Generation</div>
+        <div class="paper-row-authors">Sonal Kumar, Prem Seetharaman, Justin Salamon, Dinesh Manocha, Oriol Nieto</div>
+        <div class="paper-row-tags">
+          <span class="tag">Continual Learning</span>
+          <span class="tag">Self-Supervised</span>
+          <span class="tag">Representation Learning</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        Enables fine-grained control over acoustic characteristics in generated audio through learned disentanglement between semantic content and acoustic features. SILA augments text-to-audio generation models with signal-level conditioning, allowing precise specification of acoustic properties — timbre, reverberation, recording environment — independently of the sound event content.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2412.09789" class="paper-link" target="_blank" rel="noopener">arXiv</a>
       </div>
     </div>
   </div>
@@ -324,286 +798,18 @@
     </div>
   </div>
 
-  <!-- ── Music Flamingo ──────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="ICLR" data-year="2025" role="listitem">
+  <!-- ── RobustCLAP ───────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-text" data-venue="NAACL" data-year="2025" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
-        <span class="venue-badge">ICLR 2026</span>
+        <span class="venue-badge">NAACL 2025</span>
       </div>
       <div class="paper-row-main">
-        <div class="paper-row-title serif">Music Flamingo: Scaling Music Understanding in Audio Language Models</div>
-        <div class="paper-row-authors">Sreyan Ghosh, Arushi Goel, Lasha Koroshinadze, Sang-gil Lee, Zhifeng Kong, Joao Felipe Santos, Ramani Duraiswami, Dinesh Manocha, Wei Ping, Mohammad Shoeybi, Bryan Catanzaro</div>
+        <div class="paper-row-title serif">Do Audio-Language Models Understand Linguistic Variations?</div>
+        <div class="paper-row-authors">Ramaneswaran Selvakumar, Sonal Kumar, Hemant Kumar Giri, Nishit Anand, Ashish Seth, Sreyan Ghosh, Dinesh Manocha</div>
         <div class="paper-row-tags">
-          <span class="tag">Audio LLMs</span>
-          <span class="tag">Music Understanding</span>
-          <span class="tag">Chain-of-Thought</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        An audio-language model designed for deep music understanding, addressing music's dynamic, layered, and information-dense nature. Introduces MF-Skills, a curated dataset spanning harmony, structure, timbre, lyrics, and cultural context, alongside chain-of-thought training (MF-Think) and reinforcement learning. Achieves state-of-the-art results on 10+ music understanding benchmarks, advancing from surface-level recognition toward layered, human-like perception of songs.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2511.10289" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-        <a href="https://musicflamingo-nv-umd.github.io/" class="paper-link" target="_blank" rel="noopener">Project</a>
-        <a href="https://huggingface.co/spaces/nvidia/music-flamingo" class="paper-link" target="_blank" rel="noopener">Demo</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── UALM ───────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="ICLR" data-year="2025" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">ICLR 2026</span>
-        <span class="spotlight-badge">Oral</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">UALM: Unified Audio Language Model for Understanding, Generation and Reasoning</div>
-        <div class="paper-row-authors">Jinchuan Tian, Sang-gil Lee, Zhifeng Kong, Sreyan Ghosh, Arushi Goel, Chao-Han Huck Yang, Wenliang Dai, Zihan Liu, Hanrong Ye, Shinji Watanabe, Mohammad Shoeybi, Bryan Catanzaro, Rafael Valle, Wei Ping</div>
-        <div class="paper-row-tags">
-          <span class="tag">Audio LLMs</span>
-          <span class="tag">Generation</span>
-          <span class="tag">Reasoning</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        A unified audio language model that integrates understanding, generation, and reasoning in a single framework. UALM handles diverse audio tasks including speech recognition, audio captioning, sound event detection, and audio generation through a shared model architecture, achieving strong performance across all modalities.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2510.12000" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── Visual Description Grounding ────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="multimodal" data-venue="ICLR" data-year="2025" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">ICLR 2025</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">Visual Description Grounding Reduces Hallucinations and Boosts Reasoning in LVLMs</div>
-        <div class="paper-row-authors">Sreyan Ghosh, Chandra Kiran Reddy Evuru, Sonal Kumar, Utkarsh Tyagi, Oriol Nieto, Zeyu Jin, Dinesh Manocha</div>
-        <div class="paper-row-tags">
-          <span class="tag">Multimodal</span>
-          <span class="tag">Hallucination</span>
-          <span class="tag">Reasoning</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        Addresses hallucinations in large vision-language models by grounding visual descriptions to specific image regions. The proposed approach reduces object hallucinations and improves compositional reasoning by linking textual descriptions to precise visual evidence, achieving state-of-the-art results on multiple hallucination and visual reasoning benchmarks.
-      </div>
-      <div class="paper-links">
-        <a href="https://openreview.net/forum?id=3PRvlT8b1R" class="paper-link" target="_blank" rel="noopener">OpenReview</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── OmniVinci ────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="multimodal" data-venue="ICLR" data-year="2025" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">ICLR 2026</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM</div>
-        <div class="paper-row-authors">Hanrong Ye, Chao-Han Huck Yang, Arushi Goel, Wei Huang, Ligeng Zhu, Yuanhang Su, Sean Lin, An-Chieh Cheng, Zhen Wan, Jinchuan Tian, Yuming Lou, Dong Yang, Zhijian Liu, Yukang Chen, Ambrish Dantrey, Ehsan Jahangiri, Sreyan Ghosh, Daguang Xu, Ehsan Hosseini-Asl, Danial Mohseni Taheri, Vidya Murali, Sifei Liu, Yao Lu, Oluwatobi Olabiyi, Yu-Chiang Frank Wang, Rafael Valle, Bryan Catanzaro, Andrew Tao, Song Han, Jan Kautz, Hongxu Yin, Pavlo Molchanov</div>
-        <div class="paper-row-tags">
-          <span class="tag">Multimodal</span>
-          <span class="tag">Omni-Modal</span>
-          <span class="tag">LLM</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        An omni-modal large language model with enhanced architecture and training data for unified understanding across text, image, audio, and video modalities. OmniVinci introduces architectural improvements and curated multi-modal datasets to achieve strong performance on diverse omni-modal understanding benchmarks.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2510.15870" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── Synthio ──────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="data" data-venue="ICLR" data-year="2025" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">ICLR 2025</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">Synthio: Augmenting Small-Scale Audio Classification Datasets with Synthetic Data</div>
-        <div class="paper-row-authors">Sreyan Ghosh, Sonal Kumar, Zhifeng Kong, Rafael Valle, Bryan Catanzaro, Dinesh Manocha</div>
-        <div class="paper-row-tags">
-          <span class="tag">Data Augmentation</span>
-          <span class="tag">Synthesis</span>
-          <span class="tag">Low-Resource</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        Generates synthetic audio data through preference-optimized text-to-audio models and iterative LLM prompting. Synthio produces diverse, acoustically varied training examples that achieve up to 39% performance improvement on small-scale audio classification datasets, providing a scalable solution for low-resource audio understanding without manual data collection.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/pdf/2410.02056" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-        <a href="https://github.com/Sreyan88/Synthio" class="paper-link" target="_blank" rel="noopener">Code</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── Audio Flamingo 3 ─────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="NeurIPS" data-year="2025" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">NeurIPS 2025</span>
-        <span class="spotlight-badge">Spotlight</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">Audio Flamingo 3: Advancing Audio Intelligence with Fully Open Large Audio Language Models</div>
-        <div class="paper-row-authors">Arushi Goel, Sreyan Ghosh, Jaehyeon Kim, Sonal Kumar, Zhifeng Kong, Sang-gil Lee, Chao-Han Huck Yang, Ramani Duraiswami, Dinesh Manocha, Rafael Valle, Bryan Catanzaro</div>
-        <div class="paper-row-tags">
-          <span class="tag">Audio LLMs</span>
-          <span class="tag">Reasoning</span>
-          <span class="tag">Multi-Turn</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        A fully open large audio-language model featuring the AF-Whisper unified encoder, flexible thinking capabilities, multi-turn chat, and 10-minute audio understanding. AF3 supports voice-to-voice interaction across speech, sound, and music modalities, setting new state-of-the-art performance on MMAU, Air-Bench, and other major audio understanding benchmarks.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2507.08128" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── Audio Flamingo 2 ─────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="ICML" data-year="2025" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">ICML 2025</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">Audio Flamingo 2: An Audio-Language Model with Long-Audio Understanding and Expert Reasoning Abilities</div>
-        <div class="paper-row-authors">Sreyan Ghosh, Zhifeng Kong, Sonal Kumar, S Sakshi, Jaehyeon Kim, Wei Ping, Rafael Valle, Dinesh Manocha, Bryan Catanzaro</div>
-        <div class="paper-row-tags">
-          <span class="tag">Audio LLMs</span>
-          <span class="tag">Long-Form Audio</span>
-          <span class="tag">Reasoning</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        An audio-language model with a custom CLAP encoder and synthetic QA data, extending understanding to 30-second to 5-minute audio segments. Introduces the LongAudio dataset for long-form audio training, enabling expert-level reasoning over extended audio across speech, music, and environmental sound domains.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2503.03983" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── DARAG ────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="speech" data-venue="ACL" data-year="2025" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">ACL 2025</span>
-        <span class="spotlight-badge">Findings</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">Failing Forward: Improving Generative Error Correction for ASR with Synthetic Data and Retrieval Augmentation</div>
-        <div class="paper-row-authors">Sreyan Ghosh, Mohammad Sadegh Rasooli, Michael Levit, Peidong Wang, Jian Xue, Dinesh Manocha, Jinyu Li</div>
-        <div class="paper-row-tags">
-          <span class="tag">ASR</span>
-          <span class="tag">Error Correction</span>
-          <span class="tag">Retrieval Augmentation</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        Addresses limitations in generative error correction for speech recognition through the DARAG approach — combining synthetic data augmentation and retrieval-based entity handling for improved domain generalization. The method significantly improves ASR post-correction accuracy in low-resource and domain-shifted settings without requiring additional audio recordings.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2410.13198" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── MultiVox ─────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="multimodal" data-venue="EMNLP" data-year="2025" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">EMNLP 2025</span>
-        <span class="spotlight-badge">Oral</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">MultiVox: A Benchmark for Evaluating Voice Assistants for Multimodal Interactions</div>
-        <div class="paper-row-authors">Ramaneswaran Selvakumar, Ashish Seth, Nishit Anand, Utkarsh Tyagi, Sonal Kumar, Sreyan Ghosh, Dinesh Manocha</div>
-        <div class="paper-row-tags">
-          <span class="tag">Multimodal</span>
-          <span class="tag">Dialogue</span>
-          <span class="tag">Audio-Visual</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        The first omni voice assistant benchmark, featuring 1,000 annotated dialogues that evaluate the integration of paralinguistic speech features and visual cues for multimodal understanding. MultiVox exposes significant gaps in how current voice assistants handle non-verbal speech cues and visual context simultaneously.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2507.10859" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── EgoIllusion ──────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="multimodal" data-venue="EMNLP" data-year="2025" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">EMNLP 2025</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">EGOILLUSION: Benchmarking Hallucinations in Egocentric Video Understanding</div>
-        <div class="paper-row-authors">Ashish Seth, Utkarsh Tyagi, Ramaneswaran Selvakumar, Nishit Anand, Sonal Kumar, Sreyan Ghosh, Ramani Duraiswami, Chirag Agarwal, Dinesh Manocha</div>
-        <div class="paper-row-tags">
-          <span class="tag">Multimodal</span>
-          <span class="tag">Benchmarks</span>
+          <span class="tag">Audio-Text</span>
+          <span class="tag">CLAP</span>
           <span class="tag">Robustness</span>
         </div>
       </div>
@@ -613,40 +819,11 @@
     </div>
     <div class="paper-expand">
       <div class="paper-abstract">
-        EgoIllusion investigates how audio-language models can be misled by acoustic illusions within egocentric audio-visual scenarios. Through a novel benchmark of auditory illusion cases in first-person video, we expose systematic failure modes in current models that rely on shallow acoustic cues rather than genuine perceptual reasoning. We further propose mitigation strategies and training interventions for more robust perceptual audio-visual understanding.
+        Enhances audio-language representations to handle linguistic diversity through a multi-view contrastive learning objective. RobustCLAP trains on paraphrase, negation, and attribute-permuted variants of audio captions, producing significantly more robust models that maintain high retrieval and classification performance across diverse natural language phrasings.
       </div>
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2508.12687" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── ProSE ────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="speech" data-venue="NAACL" data-year="2025" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">NAACL 2025</span>
-        <span class="spotlight-badge">Oral</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">ProSE: Diffusion Priors for Speech Enhancement</div>
-        <div class="paper-row-authors">Sonal Kumar, Sreyan Ghosh, Utkarsh Tyagi, Anton Jeran Ratnarajah, Chandra Kiran Reddy Evuru, Ramani Duraiswami, Dinesh Manocha</div>
-        <div class="paper-row-tags">
-          <span class="tag">Speech Enhancement</span>
-          <span class="tag">Curriculum Learning</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        Proposes a methodology applying diffusion models in latent space to generate priors that are integrated into transformer-based regression for speech enhancement. The diffusion prior captures the full distribution of clean speech, enabling the regression model to produce higher-fidelity enhanced speech with state-of-the-art performance on standard benchmarks.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2503.06375" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-        <a href="https://github.com/sonalkum/ProSE" class="paper-link" target="_blank" rel="noopener">Code</a>
+        <a href="https://arxiv.org/pdf/2410.16505" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/ramaneswaran/linguistic_robust_clap" class="paper-link" target="_blank" rel="noopener">Code</a>
       </div>
     </div>
   </div>
@@ -682,19 +859,20 @@
     </div>
   </div>
 
-  <!-- ── RobustCLAP ───────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="audio-text" data-venue="NAACL" data-year="2025" role="listitem">
+  <!-- ── DARAG ────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="speech" data-venue="ACL" data-year="2025" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
-        <span class="venue-badge">NAACL 2025</span>
+        <span class="venue-badge">ACL 2025</span>
+        <span class="spotlight-badge">Findings</span>
       </div>
       <div class="paper-row-main">
-        <div class="paper-row-title serif">Do Audio-Language Models Understand Linguistic Variations?</div>
-        <div class="paper-row-authors">Ramaneswaran Selvakumar, Sonal Kumar, Hemant Kumar Giri, Nishit Anand, Ashish Seth, Sreyan Ghosh, Dinesh Manocha</div>
+        <div class="paper-row-title serif">Failing Forward: Improving Generative Error Correction for ASR with Synthetic Data and Retrieval Augmentation</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Mohammad Sadegh Rasooli, Michael Levit, Peidong Wang, Jian Xue, Dinesh Manocha, Jinyu Li</div>
         <div class="paper-row-tags">
-          <span class="tag">Audio-Text</span>
-          <span class="tag">CLAP</span>
-          <span class="tag">Robustness</span>
+          <span class="tag">ASR</span>
+          <span class="tag">Error Correction</span>
+          <span class="tag">Retrieval Augmentation</span>
         </div>
       </div>
       <div class="paper-row-chevron">
@@ -703,28 +881,28 @@
     </div>
     <div class="paper-expand">
       <div class="paper-abstract">
-        Enhances audio-language representations to handle linguistic diversity through a multi-view contrastive learning objective. RobustCLAP trains on paraphrase, negation, and attribute-permuted variants of audio captions, producing significantly more robust models that maintain high retrieval and classification performance across diverse natural language phrasings.
+        Addresses limitations in generative error correction for speech recognition through the DARAG approach — combining synthetic data augmentation and retrieval-based entity handling for improved domain generalization. The method significantly improves ASR post-correction accuracy in low-resource and domain-shifted settings without requiring additional audio recordings.
       </div>
       <div class="paper-links">
-        <a href="https://arxiv.org/pdf/2410.16505" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-        <a href="https://github.com/ramaneswaran/linguistic_robust_clap" class="paper-link" target="_blank" rel="noopener">Code</a>
+        <a href="https://arxiv.org/abs/2410.13198" class="paper-link" target="_blank" rel="noopener">arXiv</a>
       </div>
     </div>
   </div>
 
-  <!-- ── Multi-Domain Audio QA ────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="benchmarks" data-venue="ICASSP" data-year="2025" role="listitem">
+  <!-- ── EH-MAM ───────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="ssl" data-venue="EMNLP" data-year="2024" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
-        <span class="venue-badge">ICASSP 2026</span>
+        <span class="venue-badge">EMNLP 2024</span>
+        <span class="spotlight-badge">Oral</span>
       </div>
       <div class="paper-row-main">
-        <div class="paper-row-title serif">Multi-Domain Audio Question Answering Benchmark Toward Acoustic Content Reasoning</div>
-        <div class="paper-row-authors">Chao-Han Huck Yang, Sreyan Ghosh, Qing Wang, Jaeyeon Kim, Hengyi Hong, Sonal Kumar, Guirui Zhong, Zhifeng Kong, Sakshi, Vaibhavi Lokegaonkar, Oriol Nieto, Ramani Duraiswami, Dinesh Manocha, Gunhee Kim, Jun Du, Rafael Valle, Bryan Catanzaro</div>
+        <div class="paper-row-title serif">EH-MAM: Easy-to-Hard Masked Acoustic Modeling for Self-Supervised Speech Representation Learning</div>
+        <div class="paper-row-authors">Ashish Seth, Ramaneswaran Selvakumar, S Sakshi, Sonal Kumar, Sreyan Ghosh, Dinesh Manocha</div>
         <div class="paper-row-tags">
-          <span class="tag">Benchmarks</span>
-          <span class="tag">Audio QA</span>
-          <span class="tag">Reasoning</span>
+          <span class="tag">Self-Supervised Learning</span>
+          <span class="tag">Masked Modeling</span>
+          <span class="tag">Pre-training</span>
         </div>
       </div>
       <div class="paper-row-chevron">
@@ -733,10 +911,41 @@
     </div>
     <div class="paper-expand">
       <div class="paper-abstract">
-        A multi-domain audio question answering benchmark designed to evaluate acoustic content reasoning across speech, music, and environmental sound. The benchmark tests models on complex reasoning over audio content, requiring understanding of acoustic properties, temporal relationships, and domain-specific knowledge.
+        A self-supervised approach using an adaptive masking strategy that progressively increases difficulty — masking easy acoustic regions first, then harder ones — for improved speech representation learning. EH-MAM consistently outperforms uniform masking baselines across downstream classification, detection, and retrieval tasks.
       </div>
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2505.07365" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://arxiv.org/pdf/2410.13179" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/cs20s030/ehmam" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Synthio ──────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="data" data-venue="ICLR" data-year="2025" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICLR 2025</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">Synthio: Augmenting Small-Scale Audio Classification Datasets with Synthetic Data</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Sonal Kumar, Zhifeng Kong, Rafael Valle, Bryan Catanzaro, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Data Augmentation</span>
+          <span class="tag">Synthesis</span>
+          <span class="tag">Low-Resource</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        Generates synthetic audio data through preference-optimized text-to-audio models and iterative LLM prompting. Synthio produces diverse, acoustically varied training examples that achieve up to 39% performance improvement on small-scale audio classification datasets, providing a scalable solution for low-resource audio understanding without manual data collection.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/pdf/2410.02056" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/Sreyan88/Synthio" class="paper-link" target="_blank" rel="noopener">Code</a>
       </div>
     </div>
   </div>
@@ -767,243 +976,6 @@
       <div class="paper-links">
         <a href="https://arxiv.org/pdf/2409.09213" class="paper-link" target="_blank" rel="noopener">arXiv</a>
         <a href="https://github.com/Sreyan88/ReCLA" class="paper-link" target="_blank" rel="noopener">Code</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── TSPE ─────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="audio-text" data-venue="ICASSP" data-year="2025" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">ICASSP 2025</span>
-        <span class="spotlight-badge">SALMA</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">TSPE: Task-Specific Prompt Ensemble for Improved Zero-Shot Audio Classification</div>
-        <div class="paper-row-authors">Nishit Anand, Ashish Seth, Ramani Duraiswami, Dinesh Manocha</div>
-        <div class="paper-row-tags">
-          <span class="tag">Speaker Extraction</span>
-          <span class="tag">Audio-Text</span>
-          <span class="tag">Speech</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        A training-free approach that generates context-rich prompts incorporating sound attributes and sources for improved audio-text alignment and zero-shot audio classification. TSPE constructs task-specific prompt ensembles at inference time, requiring no additional training while achieving consistent improvements over single-prompt baselines across diverse audio classification benchmarks.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2501.00398" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-        <a href="https://github.com/nishitanand/TSPE" class="paper-link" target="_blank" rel="noopener">Code</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── MMAU-Pro ──────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="benchmarks" data-venue="AAAI" data-year="2025" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">AAAI 2026</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">MMAU-Pro: A Challenging and Comprehensive Benchmark for Holistic Evaluation of Audio General Intelligence</div>
-        <div class="paper-row-authors">Sonal Kumar, Šimon Sedláček, Vaibhavi Lokegaonkar, Fernando López, Wenyi Yu, Nishit Anand, Hyeonggon Ryu, Lichang Chen, Maxim Plička, Miroslav Hlaváček, William Fineas Ellingwood, Sathvik Udupa, Siyuan Hou, Allison Ferner, Sara Barahona, Cecilia Bolaños, Satish Rahi, Laura Herrera-Alarcón, Satvik Dixit, Siddhi Patil, Soham Deshmukh, Lasha Koroshinadze, Yao Liu, Leibny Paola Garcia Perera, Eleni Zanou, Themos Stafylakis, Joon Son Chung, David Harwath, Chao Zhang, Dinesh Manocha, Alicia Lozano-Diez, Santosh Kesiraju, Sreyan Ghosh, Ramani Duraiswami</div>
-        <div class="paper-row-tags">
-          <span class="tag">Benchmarks</span>
-          <span class="tag">Evaluation</span>
-          <span class="tag">Reasoning</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        A benchmark containing 5,305 instances with audio paired to expert-generated Q&A across speech, sound, and music. Evaluates models on 49 unique skills including long-form comprehension and spatial reasoning. Tests 22 models, revealing limitations where even state-of-the-art systems achieve only 59.2% accuracy — exposing gaps that simpler benchmarks cannot surface.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/pdf/2508.13992" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── SILA ─────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="data" data-venue="WASPAA" data-year="2025" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">WASPAA 2025</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">SILA: Signal-to-Language Augmentation for Enhanced Control in Text-to-Audio Generation</div>
-        <div class="paper-row-authors">Sonal Kumar, Prem Seetharaman, Justin Salamon, Dinesh Manocha, Oriol Nieto</div>
-        <div class="paper-row-tags">
-          <span class="tag">Continual Learning</span>
-          <span class="tag">Self-Supervised</span>
-          <span class="tag">Representation Learning</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        Enables fine-grained control over acoustic characteristics in generated audio through learned disentanglement between semantic content and acoustic features. SILA augments text-to-audio generation models with signal-level conditioning, allowing precise specification of acoustic properties — timbre, reverberation, recording environment — independently of the sound event content.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2412.09789" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── HALLUCINOGEN ──────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="multimodal" data-venue="preprint" data-year="2025" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">Towards a Systematic Evaluation of Hallucinations in Large-Vision Language Models</div>
-        <div class="paper-row-authors">Ashish Seth, Dinesh Manocha, Chirag Agarwal</div>
-        <div class="paper-row-tags">
-          <span class="tag">Hallucination</span>
-          <span class="tag">Benchmarks</span>
-          <span class="tag">Vision-Language</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        HALLUCINOGEN, a VQA benchmark that uses contextual reasoning prompts as hallucination attacks to systematically evaluate large vision-language models. The framework categorizes visual entities as salient (easily recognizable objects) or latent (requiring domain knowledge, such as identifying disease in X-rays), and evaluates eleven models including LLaMA-3.2, DeepSeek-V2, and Gemini. Results show current LVLMs remain susceptible to hallucination attacks even with existing mitigation strategies.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2412.20622" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── TAC ──────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="audio-text" data-venue="preprint" data-year="2025" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">TAC: Timestamped Audio Captioning</div>
-        <div class="paper-row-authors">Sonal Kumar, Prem Seetharaman, Ke Chen, Oriol Nieto, Jiaqi Su, Zhepei Wang, Rithesh Kumar, Dinesh Manocha, Nicholas J. Bryan, Zeyu Jin, Justin Salamon</div>
-        <div class="paper-row-tags">
-          <span class="tag">Audio Captioning</span>
-          <span class="tag">Temporal Grounding</span>
-          <span class="tag">Hallucination</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        Addresses hallucinations and temporal inconsistencies in audio captioning by generating temporally grounded descriptions of complex acoustic scenes. TAC disentangles overlapping sound events and assigns precise timestamps to each, producing more accurate and temporally consistent captions across audio and audio-visual understanding benchmarks.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2602.15766" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-        <a href="https://sonalkum.github.io/tacmodel" class="paper-link" target="_blank" rel="noopener">Project</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── SPUR ─────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="preprint" data-year="2025" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">SPUR: A Plug-and-Play Framework for Integrating Spatial Audio Understanding and Reasoning into Large Audio-Language Models</div>
-        <div class="paper-row-authors">S Sakshi, Vaibhavi Lokegaonkar, Neil Zhang, Ramani Duraiswami, Sreyan Ghosh, Dinesh Manocha, Lie Lu</div>
-        <div class="paper-row-tags">
-          <span class="tag">Spatial Audio</span>
-          <span class="tag">Audio LLMs</span>
-          <span class="tag">Reasoning</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        A lightweight plug-and-play framework for endowing large audio-language models with spatial audio understanding and reasoning. SPUR incorporates a First-Order Ambisonics encoder for processing directional audio channels and introduces SPUR-Set, a dataset for training spatial reasoning capabilities. The approach preserves existing model functionality while enabling detection of sound direction, elevation, distance, and speaker attribution in real-world acoustic environments.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2511.06606" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-        <a href="https://sakshi113.github.io/spur/" class="paper-link" target="_blank" rel="noopener">Project</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── CompA ────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="audio-text" data-venue="ICLR" data-year="2024" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">ICLR 2024</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">CompA: Addressing the Gap in Compositional Reasoning in Audio-Language Models</div>
-        <div class="paper-row-authors">Sreyan Ghosh, Ashish Seth, Sonal Kumar, Utkarsh Tyagi, Chandra Kiran Evuru, S. Ramaneswaran, S. Sakshi, Oriol Nieto, Ramani Duraiswami, Dinesh Manocha</div>
-        <div class="paper-row-tags">
-          <span class="tag">Compositional Reasoning</span>
-          <span class="tag">Benchmarks</span>
-          <span class="tag">Audio-Language</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        CompA (Compositional Evaluation of Audio-Language Models) benchmarks the compositional understanding of audio-language models through attribute binding, order sensitivity, and multi-event reasoning. It reveals that current models struggle significantly with compositional audio descriptions — failing to correctly bind attributes to the right sound sources or reason about temporal ordering of events. CompA provides both a benchmark and targeted training signal to address these compositional gaps.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/pdf/2310.08753" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-        <a href="https://github.com/Sreyan88/CompA" class="paper-link" target="_blank" rel="noopener">Code</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── Limitations of Instruction Tuning ───────────────────── -->
-  <div class="paper-row-wrap" data-theme="multimodal" data-venue="ICML" data-year="2024" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">ICML 2024</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">A Closer Look at the Limitations of Instruction Tuning</div>
-        <div class="paper-row-authors">Sreyan Ghosh, Chandra Kiran Reddy Evuru, Sonal Kumar, Ramaneswaran S, Deepali Aneja, Zeyu Jin, Ramani Duraiswami, Dinesh Manocha</div>
-        <div class="paper-row-tags">
-          <span class="tag">Instruction Tuning</span>
-          <span class="tag">LLMs</span>
-          <span class="tag">Fine-tuning</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        A systematic investigation of the shortcomings of instruction tuning (IT) for adapting pre-trained LLMs into conversational agents. Through rigorous experiments, the paper identifies four key limitations: IT cannot expand model knowledge (LoRA only learns style, full fine-tuning causes knowledge loss); copying response formats degrades output quality; full-parameter fine-tuning heightens hallucinations through token borrowing; and popular IT improvement techniques fail to outperform simple LoRA baselines. The central finding is that responses generated purely from pre-trained knowledge consistently outperform models that learn new knowledge from IT.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2402.05119" class="paper-link" target="_blank" rel="noopener">arXiv</a>
       </div>
     </div>
   </div>
@@ -1040,110 +1012,20 @@
     </div>
   </div>
 
-  <!-- ── EH-MAM ───────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="ssl" data-venue="EMNLP" data-year="2024" role="listitem">
+  <!-- ── LipGER ──────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="speech" data-venue="Interspeech" data-year="2024" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
-        <span class="venue-badge">EMNLP 2024</span>
+        <span class="venue-badge">Interspeech 2024</span>
         <span class="spotlight-badge">Oral</span>
       </div>
       <div class="paper-row-main">
-        <div class="paper-row-title serif">EH-MAM: Easy-to-Hard Masked Acoustic Modeling for Self-Supervised Speech Representation Learning</div>
-        <div class="paper-row-authors">Ashish Seth, Ramaneswaran Selvakumar, S Sakshi, Sonal Kumar, Sreyan Ghosh, Dinesh Manocha</div>
+        <div class="paper-row-title serif">LipGER: Visually-Conditioned Generative Error Correction for Robust Automatic Speech Recognition</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Sonal Kumar, Ashish Seth, Purva Chiniya, Utkarsh Tyagi, Ramani Duraiswami, Dinesh Manocha</div>
         <div class="paper-row-tags">
-          <span class="tag">Self-Supervised Learning</span>
-          <span class="tag">Masked Modeling</span>
-          <span class="tag">Pre-training</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        A self-supervised approach using an adaptive masking strategy that progressively increases difficulty — masking easy acoustic regions first, then harder ones — for improved speech representation learning. EH-MAM consistently outperforms uniform masking baselines across downstream classification, detection, and retrieval tasks.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/pdf/2410.13179" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-        <a href="https://github.com/cs20s030/ehmam" class="paper-link" target="_blank" rel="noopener">Code</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── AV-RIR ──────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="multimodal" data-venue="CVPR" data-year="2024" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">CVPR 2024</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">AV-RIR: Audio-Visual Room Impulse Response Estimation</div>
-        <div class="paper-row-authors">Anton Ratnarajah, Sreyan Ghosh, Sonal Kumar, Purva Chiniya, Dinesh Manocha</div>
-        <div class="paper-row-tags">
-          <span class="tag">Audio-Visual</span>
-          <span class="tag">Room Acoustics</span>
-          <span class="tag">Spatial Audio</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        A multimodal approach combining audio and visual information for Room Impulse Response (RIR) estimation via a neural codec-based architecture. Introduces Geo-Mat features encoding material properties from visual data, and CRIP, which improves late reverberation components via image-to-RIR retrieval by 86%. Achieves 36–63% improvements over audio-only and visual-only baselines across acoustic metrics.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2312.00834" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-        <a href="https://anton-jeran.github.io/AVRIR/" class="paper-link" target="_blank" rel="noopener">Project</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── RECAP ───────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="audio-text" data-venue="ICASSP" data-year="2024" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">ICASSP 2024</span>
-        <span class="spotlight-badge">Oral</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">RECAP: Retrieval-Augmented Audio Captioning</div>
-        <div class="paper-row-authors">Sreyan Ghosh, Sonal Kumar, Chandra Kiran Reddy Evuru, Ramani Duraiswami, Dinesh Manocha</div>
-        <div class="paper-row-tags">
-          <span class="tag">Audio Captioning</span>
-          <span class="tag">Retrieval Augmentation</span>
-          <span class="tag">Out-of-Domain</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        A retrieval-augmented audio captioning system that conditions a GPT-2 decoder on both the input audio and similar captions retrieved from a datastore via CLAP. RECAP achieves competitive in-domain performance and significant out-of-domain improvements, capable of captioning novel audio events unseen during training. Also releases 150,000+ new weakly labeled captions for AudioSet, AudioCaps, and Clotho.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2309.09836" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── Stable Distillation ──────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="domain" data-venue="ICASSP" data-year="2024" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">ICASSP 2024</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">Stable Distillation: Regularizing Continued Pre-training for Low-Resource Automatic Speech Recognition</div>
-        <div class="paper-row-authors">Ashish Seth, Sreyan Ghosh, S. Umesh, Dinesh Manocha</div>
-        <div class="paper-row-tags">
-          <span class="tag">Knowledge Distillation</span>
-          <span class="tag">Domain Adaptation</span>
           <span class="tag">ASR</span>
+          <span class="tag">Error Correction</span>
+          <span class="tag">Audio-Visual</span>
         </div>
       </div>
       <div class="paper-row-chevron">
@@ -1152,11 +1034,40 @@
     </div>
     <div class="paper-expand">
       <div class="paper-abstract">
-        A self-distillation approach for continued SSL pre-training that adapts large pre-trained models to low-resource ASR domains. By regularizing the adaptation process with a stable teacher signal, Stable Distillation achieves 0.8–7% WER improvements over naive continued pre-training while avoiding catastrophic forgetting of the original pre-trained representations.
+        A framework that leverages lip movement cues to correct ASR errors in noisy environments, instructing a language model to select among N-best hypotheses conditioned on visual lip cues. LipGER achieves word error rate improvements of 1.1–49.2% across four datasets and introduces LipHyp, a large-scale dataset with hypothesis-transcription pairs equipped with lip motion cues.
       </div>
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2312.12783" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-        <a href="https://github.com/cs20s030/stable_distillation" class="paper-link" target="_blank" rel="noopener">Code</a>
+        <a href="https://arxiv.org/abs/2406.04432" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/Sreyan88/LipGER" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Limitations of Instruction Tuning ───────────────────── -->
+  <div class="paper-row-wrap" data-theme="multimodal" data-venue="ICML" data-year="2024" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICML 2024</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">A Closer Look at the Limitations of Instruction Tuning</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Chandra Kiran Reddy Evuru, Sonal Kumar, Ramaneswaran S, Deepali Aneja, Zeyu Jin, Ramani Duraiswami, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Instruction Tuning</span>
+          <span class="tag">LLMs</span>
+          <span class="tag">Fine-tuning</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A systematic investigation of the shortcomings of instruction tuning (IT) for adapting pre-trained LLMs into conversational agents. Through rigorous experiments, the paper identifies four key limitations: IT cannot expand model knowledge (LoRA only learns style, full fine-tuning causes knowledge loss); copying response formats degrades output quality; full-parameter fine-tuning heightens hallucinations through token borrowing; and popular IT improvement techniques fail to outperform simple LoRA baselines. The central finding is that responses generated purely from pre-trained knowledge consistently outperform models that learn new knowledge from IT.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2402.05119" class="paper-link" target="_blank" rel="noopener">arXiv</a>
       </div>
     </div>
   </div>
@@ -1191,20 +1102,19 @@
     </div>
   </div>
 
-  <!-- ── LipGER ──────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="speech" data-venue="Interspeech" data-year="2024" role="listitem">
+  <!-- ── Stable Distillation ──────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="domain" data-venue="ICASSP" data-year="2024" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
-        <span class="venue-badge">Interspeech 2024</span>
-        <span class="spotlight-badge">Oral</span>
+        <span class="venue-badge">ICASSP 2024</span>
       </div>
       <div class="paper-row-main">
-        <div class="paper-row-title serif">LipGER: Visually-Conditioned Generative Error Correction for Robust Automatic Speech Recognition</div>
-        <div class="paper-row-authors">Sreyan Ghosh, Sonal Kumar, Ashish Seth, Purva Chiniya, Utkarsh Tyagi, Ramani Duraiswami, Dinesh Manocha</div>
+        <div class="paper-row-title serif">Stable Distillation: Regularizing Continued Pre-training for Low-Resource Automatic Speech Recognition</div>
+        <div class="paper-row-authors">Ashish Seth, Sreyan Ghosh, S. Umesh, Dinesh Manocha</div>
         <div class="paper-row-tags">
+          <span class="tag">Knowledge Distillation</span>
+          <span class="tag">Domain Adaptation</span>
           <span class="tag">ASR</span>
-          <span class="tag">Error Correction</span>
-          <span class="tag">Audio-Visual</span>
         </div>
       </div>
       <div class="paper-row-chevron">
@@ -1213,11 +1123,101 @@
     </div>
     <div class="paper-expand">
       <div class="paper-abstract">
-        A framework that leverages lip movement cues to correct ASR errors in noisy environments, instructing a language model to select among N-best hypotheses conditioned on visual lip cues. LipGER achieves word error rate improvements of 1.1–49.2% across four datasets and introduces LipHyp, a large-scale dataset with hypothesis-transcription pairs equipped with lip motion cues.
+        A self-distillation approach for continued SSL pre-training that adapts large pre-trained models to low-resource ASR domains. By regularizing the adaptation process with a stable teacher signal, Stable Distillation achieves 0.8–7% WER improvements over naive continued pre-training while avoiding catastrophic forgetting of the original pre-trained representations.
       </div>
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2406.04432" class="paper-link" target="_blank" rel="noopener">arXiv</a>
-        <a href="https://github.com/Sreyan88/LipGER" class="paper-link" target="_blank" rel="noopener">Code</a>
+        <a href="https://arxiv.org/abs/2312.12783" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/cs20s030/stable_distillation" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── AV-RIR ──────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="multimodal" data-venue="CVPR" data-year="2024" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">CVPR 2024</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">AV-RIR: Audio-Visual Room Impulse Response Estimation</div>
+        <div class="paper-row-authors">Anton Ratnarajah, Sreyan Ghosh, Sonal Kumar, Purva Chiniya, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio-Visual</span>
+          <span class="tag">Room Acoustics</span>
+          <span class="tag">Spatial Audio</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A multimodal approach combining audio and visual information for Room Impulse Response (RIR) estimation via a neural codec-based architecture. Introduces Geo-Mat features encoding material properties from visual data, and CRIP, which improves late reverberation components via image-to-RIR retrieval by 86%. Achieves 36–63% improvements over audio-only and visual-only baselines across acoustic metrics.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2312.00834" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://anton-jeran.github.io/AVRIR/" class="paper-link" target="_blank" rel="noopener">Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CompA ────────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-text" data-venue="ICLR" data-year="2024" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICLR 2024</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">CompA: Addressing the Gap in Compositional Reasoning in Audio-Language Models</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Ashish Seth, Sonal Kumar, Utkarsh Tyagi, Chandra Kiran Evuru, S. Ramaneswaran, S. Sakshi, Oriol Nieto, Ramani Duraiswami, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Compositional Reasoning</span>
+          <span class="tag">Benchmarks</span>
+          <span class="tag">Audio-Language</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        CompA (Compositional Evaluation of Audio-Language Models) benchmarks the compositional understanding of audio-language models through attribute binding, order sensitivity, and multi-event reasoning. It reveals that current models struggle significantly with compositional audio descriptions — failing to correctly bind attributes to the right sound sources or reason about temporal ordering of events. CompA provides both a benchmark and targeted training signal to address these compositional gaps.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/pdf/2310.08753" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/Sreyan88/CompA" class="paper-link" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── RECAP ───────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-text" data-venue="ICASSP" data-year="2024" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICASSP 2024</span>
+        <span class="spotlight-badge">Oral</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">RECAP: Retrieval-Augmented Audio Captioning</div>
+        <div class="paper-row-authors">Sreyan Ghosh, Sonal Kumar, Chandra Kiran Reddy Evuru, Ramani Duraiswami, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio Captioning</span>
+          <span class="tag">Retrieval Augmentation</span>
+          <span class="tag">Out-of-Domain</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A retrieval-augmented audio captioning system that conditions a GPT-2 decoder on both the input audio and similar captions retrieved from a datastore via CLAP. RECAP achieves competitive in-domain performance and significant out-of-domain improvements, capable of captioning novel audio events unseen during training. Also releases 150,000+ new weakly labeled captions for AudioSet, AudioCaps, and Clotho.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2309.09836" class="paper-link" target="_blank" rel="noopener">arXiv</a>
       </div>
     </div>
   </div>
@@ -1247,6 +1247,35 @@
       </div>
       <div class="paper-links">
         <a href="https://arxiv.org/abs/2308.12370" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── UNFUSED ──────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="ssl" data-venue="ICASSP" data-year="2023" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">ICASSP 2023</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">UNFUSED: UNsupervised Finetuning Using SElf supervised Distillation</div>
+        <div class="paper-row-authors">Ashish Seth, Sreyan Ghosh, S. Umesh, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Self-Supervised Learning</span>
+          <span class="tag">Audio Classification</span>
+          <span class="tag">Pseudo-Labels</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A self-supervised learning approach that reduces reliance on labeled data for audio classification by generating pseudo-labels via clustering, then using them for self-distillation on a randomly initialized model before final fine-tuning. Unlike prior work that directly fine-tunes SSL encoders, UNFUSED decouples representation learning from task adaptation, achieving state-of-the-art on the LAPE Benchmark with a 40% reduction in parameters over the previous best system.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2303.05668" class="paper-link" target="_blank" rel="noopener">arXiv</a>
       </div>
     </div>
   </div>
@@ -1307,35 +1336,6 @@
       <div class="paper-links">
         <a href="https://arxiv.org/pdf/2211.01515" class="paper-link" target="_blank" rel="noopener">arXiv</a>
         <a href="https://github.com/Sreyan88/LAPE" class="paper-link" target="_blank" rel="noopener">Code</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── UNFUSED ──────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="ssl" data-venue="ICASSP" data-year="2023" role="listitem">
-    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
-      <div class="paper-row-venue">
-        <span class="venue-badge">ICASSP 2023</span>
-      </div>
-      <div class="paper-row-main">
-        <div class="paper-row-title serif">UNFUSED: UNsupervised Finetuning Using SElf supervised Distillation</div>
-        <div class="paper-row-authors">Ashish Seth, Sreyan Ghosh, S. Umesh, Dinesh Manocha</div>
-        <div class="paper-row-tags">
-          <span class="tag">Self-Supervised Learning</span>
-          <span class="tag">Audio Classification</span>
-          <span class="tag">Pseudo-Labels</span>
-        </div>
-      </div>
-      <div class="paper-row-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </div>
-    <div class="paper-expand">
-      <div class="paper-abstract">
-        A self-supervised learning approach that reduces reliance on labeled data for audio classification by generating pseudo-labels via clustering, then using them for self-distillation on a randomly initialized model before final fine-tuning. Unlike prior work that directly fine-tunes SSL encoders, UNFUSED decouples representation learning from task adaptation, achieving state-of-the-art on the LAPE Benchmark with a 40% reduction in parameters over the previous best system.
-      </div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2303.05668" class="paper-link" target="_blank" rel="noopener">arXiv</a>
       </div>
     </div>
   </div>
