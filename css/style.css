@@ -608,6 +608,80 @@ section + section { border-top: 1px solid var(--border); }
   flex-shrink: 0;
 }
 
+/* ── Industry collaborations ──────────────────────────────────── */
+.collab-marquee-wrap {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  padding: 16px 0 12px;
+}
+
+.collab-track {
+  display: flex;
+  gap: 100px;
+  width: max-content;
+  align-items: center;
+  animation: collab-pan 30s linear infinite;
+}
+
+.collab-marquee-wrap:hover .collab-track {
+  animation-play-state: paused;
+}
+
+@keyframes collab-pan {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+.collab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  cursor: default;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+  width: 200px;
+}
+
+.collab-item:hover {
+  opacity: 0.75;
+}
+
+/* logo image: fixed height box, object-fit preserves aspect ratio */
+.collab-item img {
+  width: 100%;
+  height: 80px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+/* square/icon logos (Scale AI, Sesame) get a narrower slot */
+.collab-item.logo-square {
+  width: 100px;
+}
+
+.collab-item-name {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--t3);
+  white-space: nowrap;
+}
+
+/* Dolby only: pure black logo needs inversion in dark mode */
+[data-theme="dark"] .collab-item.logo-dark img {
+  filter: invert(1) brightness(0.85);
+}
+
+/* Sesame has a solid bg — round the corners */
+.collab-item.logo-rounded img {
+  border-radius: 16px;
+}
+
 /* ── Footer ───────────────────────────────────────────────────── */
 .footer {
   border-top: 1px solid var(--border);
