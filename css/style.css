@@ -672,9 +672,12 @@ section + section { border-top: 1px solid var(--border); }
   white-space: nowrap;
 }
 
-/* Dolby only: pure black logo needs inversion in dark mode */
+/* Black logos (NVIDIA, Dolby): invert to white in dark mode, keep black in light */
 [data-theme="dark"] .collab-item.logo-dark img {
-  filter: invert(1) brightness(0.85);
+  filter: invert(1) brightness(0.9);
+}
+[data-theme="light"] .collab-item.logo-dark img {
+  filter: none;
 }
 
 /* Sesame has a solid bg — round the corners */
