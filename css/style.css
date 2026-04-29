@@ -292,7 +292,7 @@ section + section { border-top: 1px solid var(--border); }
   font-weight: 300;
   color: var(--t2);
   line-height: 1.85;
-  margin-bottom: 44px;
+  margin-bottom: 36px;
   max-width: 460px;
 }
 
@@ -327,6 +327,48 @@ section + section { border-top: 1px solid var(--border); }
   background: var(--accent-sub);
 }
 .action-pill.primary:hover { background: var(--accent-sub2); }
+
+.hero-pill-groups {
+  margin-top: 0;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.hero-pill-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hero-pill-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--t3);
+}
+.hero-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.resource-pill {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--t2);
+  padding: 5px 13px;
+  border: 1px solid var(--border2);
+  border-radius: 100px;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+  line-height: 1;
+}
+.resource-pill:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-sub);
+}
 
 .hero-canvas-wrap {
   position: relative;
