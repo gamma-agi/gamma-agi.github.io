@@ -1100,7 +1100,7 @@ section + section { border-top: 1px solid var(--border); }
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 12px;
-  align-items: start;
+  align-items: center;
 }
 
 .pi-photo {
