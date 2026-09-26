@@ -10,7 +10,7 @@
     (function(){var t=localStorage.getItem('gamma-theme');if(!t)t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);})();
   </script>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20260926">
 </head>
 <body>
 
@@ -54,6 +54,41 @@
     </p>
   </div>
 </header>
+
+<!-- ── Events grid: 2026 ──────────────────────────────────────── -->
+<section aria-labelledby="events-2026-label">
+  <div class="container">
+    <span class="section-label" id="events-2026-label">2026</span>
+    <div class="events-grid stagger-children">
+
+      <!-- SALMA 2026 @ EMNLP -->
+      <article class="event-card">
+        <span class="event-date-label">Oct 24–29, 2026</span>
+        <h2 class="event-title serif">SALMA Workshop @ EMNLP 2026</h2>
+        <div class="event-location">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+          Budapest, Hungary · EMNLP 2026
+        </div>
+        <p class="event-desc">
+          The Speech and Audio Language Models (SALMA) workshop focuses on LLM-based approaches that
+          treat speech and audio as first-class linguistic modalities rather than secondary inputs —
+          spanning architectural design, training methods, data creation, alignment, and evaluation for
+          large audio-language models across speech, non-speech sound, music, and mixed audio.
+          Co-located with EMNLP 2026.
+        </p>
+        <a href="https://salma-workshop.github.io/salma-2026/" target="_blank" rel="noopener" class="event-cta">
+          Workshop website
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
 
 <!-- ── Events grid ────────────────────────────────────────────── -->
 <section aria-labelledby="events-grid-label">
@@ -173,6 +208,7 @@
   </div>
   <div class="footer-bottom">
     <p>© 2025 GAMMA Lab, University of Maryland.</p>
+    <p>Website maintained by <a href="https://aryanvib.github.io/" target="_blank" rel="noopener" style="color:var(--accent)">Aryan Bhosale</a>.</p>
     <p>Department of Computer Science · College Park, MD</p>
   </div>
 </footer>

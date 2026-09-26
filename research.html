@@ -10,7 +10,7 @@
     (function(){var t=localStorage.getItem('gamma-theme');if(!t)t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);})();
   </script>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20260926">
 </head>
 <body>
 
@@ -146,6 +146,124 @@
     </div>
   </div>
 
+      <!-- ── ParA-LLM ──────────────────────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="Interspeech" data-year="2026" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">Interspeech 2026</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">ParA-LLM: A Unified Approach to Paralinguistic and Acoustic Speech Understanding</div>
+        <div class="paper-row-authors">Nishit Anand, Jiaqi Su, Ke Chen, Yunyun Wang, Dinesh Manocha, Ramani Duraiswami, Rithesh Kumar, Zeyu Jin</div>
+        <div class="paper-row-tags">
+          <span class="tag">Speech</span>
+          <span class="tag">Paralinguistics</span>
+          <span class="tag">Audio LLMs</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A unified framework that gives audio language models a grasp of paralinguistic and acoustic speech attributes — speaker traits, expressive variation, and environmental conditions — that existing systems largely miss. ParA-LLM defines 22 paralinguistic characteristics, is trained on over 1.2M audio-QA pairs through a two-stage curriculum (single-attribute then multi-attribute reasoning), and is evaluated on ParA-Bench, a 6,000-question benchmark where frontier models such as GPT-4o-Audio reach only 36% accuracy. ParA-LLM surpasses state-of-the-art audio LLMs by 7.5% on ParA-Bench with further gains on other speech benchmarks.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2609.22771" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://nishitanand.github.io/paralinguistic-understanding-llm/" class="paper-link" target="_blank" rel="noopener">Project</a>
+      </div>
+    </div>
+  </div>
+
+      <!-- ── A Closer Look at Failure Modes (Temporal Understanding) ── -->
+  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="Interspeech" data-year="2026" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">Interspeech 2026</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">A Closer Look at Failure Modes in Temporal Understanding of Large Audio-Language Models</div>
+        <div class="paper-row-authors">Apoorva Kulkarni, Kaousheik Jayakumar, Sreyan Ghosh, Sarah Wiegreffe, Dinesh Manocha, Ramani Duraiswami</div>
+        <div class="paper-row-tags">
+          <span class="tag">Audio LLMs</span>
+          <span class="tag">Temporal Understanding</span>
+          <span class="tag">Interpretability</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A mechanistic study of why large audio-language models still struggle with temporal reasoning. The authors introduce a benchmark of 1,657 questions across three foundational tasks designed for mechanistic analysis, and find that models often under-utilize audio when textual cues are available. Comparing attention interventions, they show that redistributing attention across audio tokens is more effective than simply increasing overall audio attention — pointing to concrete levers for improving temporal understanding.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2606.17417" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+      <!-- ── DuplexSpeechBench-IFEval ──────────────────────────────── -->
+  <div class="paper-row-wrap" data-theme="speech" data-venue="preprint" data-year="2026" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">DuplexSpeechBench-IFEval: Evaluating Implicit Instruction Following in Full-Duplex Voice Agents</div>
+        <div class="paper-row-authors">Puneet Mathur, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Benchmarks</span>
+          <span class="tag">Voice Agents</span>
+          <span class="tag">Speech</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A benchmark for implicit instruction following in full-duplex voice agents, which must continuously decide when to listen, backchannel, interrupt, handle overlaps, take the floor, and yield — often from a role or persona rather than explicit turn-management instructions. DSB-IFEval comprises 1,038 test cases across eight assistant roles and five conditioning protocols, scoring real-time floor management (Instruction Adherence Score) and persona-consistent content (Persona Adherence Score). Across six real-time speech systems it reveals architecture-dependent trade-offs, with full-duplex models more sensitive to explicit versus inferred behavioral instructions.
+      </div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2609.03423" class="paper-link" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </div>
+
+      <!-- ── Exploring Textual Guidance for Video-to-Music Generation ─ -->
+  <div class="paper-row-wrap" data-theme="multimodal" data-venue="NeurIPS" data-year="2026" role="listitem">
+    <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
+      <div class="paper-row-venue">
+        <span class="venue-badge">NeurIPS 2026</span>
+        <span class="spotlight-badge">Creative AI Track</span>
+      </div>
+      <div class="paper-row-main">
+        <div class="paper-row-title serif">Exploring Textual Guidance for Video-to-Music Generation Models</div>
+        <div class="paper-row-authors">Vaibhavi Lokegaonkar, Aryan Vijay Bhosale, Vishnu Raj, Gouthaman KV, Ramani Duraiswami, Lie Lu, Sreyan Ghosh, Dinesh Manocha</div>
+        <div class="paper-row-tags">
+          <span class="tag">Generation</span>
+          <span class="tag">Video-to-Music</span>
+          <span class="tag">Multimodal</span>
+        </div>
+      </div>
+      <div class="paper-row-chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="paper-expand">
+      <div class="paper-abstract">
+        A study of how textual guidance shapes video-to-music generation models — examining the role of text prompts in producing music that is semantically aligned with visual content. Accepted to the NeurIPS 2026 Creative AI Track.
+      </div>
+      <div class="paper-links">
+        <a href="https://video-robin.github.io/video-robin/" class="paper-link" target="_blank" rel="noopener">Project</a>
+      </div>
+    </div>
+  </div>
+
       <!-- ── TEMPO ─────────────────────────────────────────────────── -->
   <div class="paper-row-wrap" data-theme="audio-llm" data-venue="EMNLP" data-year="2026" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
@@ -183,7 +301,7 @@
         <span class="venue-badge">EMNLP 2026</span>
       </div>
       <div class="paper-row-main">
-        <div class="paper-row-title serif">VIBE: Video Instruction-aligned Background Music Generation</div>
+        <div class="paper-row-title serif"><img src="assets/model_logos/vibe.png" alt="" style="display:inline-block;height:1.15em;vertical-align:-0.2em;margin-right:8px;">VIBE: Video Instruction-aligned Background Music Generation</div>
         <div class="paper-row-authors">Aryan Vijay Bhosale, Vaibhavi Lokegaonkar, Vishnu Raj, Gouthaman KV, Sreyan Ghosh, Ramani Duraiswami, Lie Lu, Dinesh Manocha</div>
         <div class="paper-row-tags">
           <span class="tag">Generation</span>
@@ -237,10 +355,10 @@
   </div>
 
       <!-- ── TORUS ─────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="benchmarks" data-venue="preprint" data-year="2026" role="listitem">
+  <div class="paper-row-wrap" data-theme="benchmarks" data-venue="EMNLP" data-year="2026" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
-        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
+        <span class="venue-badge">EMNLP SALMA Workshop 2026</span>
       </div>
       <div class="paper-row-main">
         <div class="paper-row-title serif"><img src="assets/model_logos/torus.png" alt="" style="display:inline-block;height:1.15em;vertical-align:-0.2em;margin-right:8px;">TORUS: A Test of Rendering-Understanding Self-Coherence for Unified Audio Models</div>
@@ -267,10 +385,10 @@
   </div>
 
       <!-- ── Audio-Visual Flamingo ─────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="preprint" data-year="2026" role="listitem">
+  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="NeurIPS" data-year="2026" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
-        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
+        <span class="venue-badge">NeurIPS 2026</span>
       </div>
       <div class="paper-row-main">
         <div class="paper-row-title serif">Audio-Visual Flamingo: Open Audio-Visual Intelligence for Long and Complex Videos</div>
@@ -475,10 +593,11 @@
   </div>
 
   <!-- ── AHA ───────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="preprint" data-year="2026" role="listitem">
+  <div class="paper-row-wrap" data-theme="audio-llm" data-venue="Interspeech" data-year="2026" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
-        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
+        <span class="venue-badge">Interspeech 2026</span>
+        <span class="spotlight-badge">Oral</span>
       </div>
       <div class="paper-row-main">
         <div class="paper-row-title serif">Audio Hallucination Attacks: Probing the Reliability of Large Audio Language Models</div>
@@ -504,10 +623,10 @@
   </div>
 
   <!-- ── MMOU ──────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="benchmarks" data-venue="preprint" data-year="2026" role="listitem">
+  <div class="paper-row-wrap" data-theme="benchmarks" data-venue="NeurIPS" data-year="2026" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
-        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
+        <span class="venue-badge">NeurIPS 2026</span>
       </div>
       <div class="paper-row-main">
         <div class="paper-row-title serif">MMOU: A Massive Multi-Task Omni Understanding and Reasoning Benchmark for Long and Complex Real-World Videos</div>
@@ -534,10 +653,10 @@
   </div>
 
   <!-- ── TAC ──────────────────────────────────────────────────── -->
-  <div class="paper-row-wrap" data-theme="audio-text" data-venue="preprint" data-year="2025" role="listitem">
+  <div class="paper-row-wrap" data-theme="audio-text" data-venue="NeurIPS" data-year="2026" role="listitem">
     <div class="paper-row" tabindex="0" role="button" aria-expanded="false">
       <div class="paper-row-venue">
-        <span class="venue-badge" style="background:transparent;border-color:var(--border2);color:var(--t3);">Preprint</span>
+        <span class="venue-badge">NeurIPS 2026</span>
       </div>
       <div class="paper-row-main">
         <div class="paper-row-title serif">TAC: Timestamped Audio Captioning</div>
@@ -1617,6 +1736,7 @@
   </div>
   <div class="footer-bottom">
     <p>© 2025 GAMMA Lab, University of Maryland.</p>
+    <p>Website maintained by <a href="https://aryanvib.github.io/" target="_blank" rel="noopener" style="color:var(--accent)">Aryan Bhosale</a>.</p>
     <p>Department of Computer Science · College Park, MD</p>
   </div>
 </footer>

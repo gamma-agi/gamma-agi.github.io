@@ -11,7 +11,7 @@
     (function(){var t=localStorage.getItem('gamma-theme');if(!t)t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);})();
   </script>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20260926">
 </head>
 <body>
 
@@ -181,10 +181,14 @@
     <span class="section-label" id="flagship-label">Latest Research</span>
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
       <h2 class="section-title serif" style="margin:0;">Latest Papers</h2>
-      <a href="research.html?year=2026" class="btn-outline">View all →</a>
+      <div class="marquee-controls">
+        <button type="button" class="marquee-btn" id="marquee-prev" aria-label="Previous paper">‹</button>
+        <button type="button" class="marquee-btn" id="marquee-next" aria-label="Next paper">›</button>
+        <a href="research.html?year=2026" class="btn-outline">View all →</a>
+      </div>
     </div>
   </div>
-  <div class="paper-marquee-wrap" aria-label="Latest papers">
+  <div class="paper-marquee-wrap" id="paper-marquee" aria-label="Latest papers">
     <div class="paper-marquee-track">
 
       <!-- set 1 -->
@@ -202,7 +206,7 @@
       </a>
       <a href="https://arxiv.org/abs/2608.30125" target="_blank" rel="noopener" class="paper-card paper-marquee-card">
         <div class="badge-row"><span class="venue-badge">EMNLP 2026</span></div>
-        <div class="paper-card-title serif">VIBE: Video Instruction-aligned Background Music Generation</div>
+        <div class="paper-card-title serif"><img src="assets/model_logos/vibe.png" alt="" style="display:inline-block;height:1.15em;vertical-align:-0.2em;margin-right:8px;">VIBE: Video Instruction-aligned Background Music Generation</div>
         <div class="badge-row"><span class="tag">Generation</span><span class="tag">Multimodal</span></div>
         <div class="paper-card-bottom"><span class="paper-card-meta">Bhosale, Lokegaonkar et al.</span><span class="paper-card-arrow">→</span></div>
       </a>
@@ -246,7 +250,7 @@
       </a>
       <a href="https://arxiv.org/abs/2608.30125" target="_blank" rel="noopener" class="paper-card paper-marquee-card" aria-hidden="true">
         <div class="badge-row"><span class="venue-badge">EMNLP 2026</span></div>
-        <div class="paper-card-title serif">VIBE: Video Instruction-aligned Background Music Generation</div>
+        <div class="paper-card-title serif"><img src="assets/model_logos/vibe.png" alt="" style="display:inline-block;height:1.15em;vertical-align:-0.2em;margin-right:8px;">VIBE: Video Instruction-aligned Background Music Generation</div>
         <div class="badge-row"><span class="tag">Generation</span><span class="tag">Multimodal</span></div>
         <div class="paper-card-bottom"><span class="paper-card-meta">Bhosale, Lokegaonkar et al.</span><span class="paper-card-arrow">→</span></div>
       </a>
@@ -290,7 +294,7 @@
       </a>
       <a href="https://arxiv.org/abs/2608.30125" target="_blank" rel="noopener" class="paper-card paper-marquee-card" aria-hidden="true">
         <div class="badge-row"><span class="venue-badge">EMNLP 2026</span></div>
-        <div class="paper-card-title serif">VIBE: Video Instruction-aligned Background Music Generation</div>
+        <div class="paper-card-title serif"><img src="assets/model_logos/vibe.png" alt="" style="display:inline-block;height:1.15em;vertical-align:-0.2em;margin-right:8px;">VIBE: Video Instruction-aligned Background Music Generation</div>
         <div class="badge-row"><span class="tag">Generation</span><span class="tag">Multimodal</span></div>
         <div class="paper-card-bottom"><span class="paper-card-meta">Bhosale, Lokegaonkar et al.</span><span class="paper-card-arrow">→</span></div>
       </a>
@@ -385,158 +389,175 @@
 <section id="updates" aria-labelledby="updates-label">
   <div class="container">
     <span class="section-label" id="updates-label">Updates</span>
-    <div class="timeline reveal">
+    <div class="updates-cols reveal">
 
-      <div class="timeline-item">
-        <span class="timeline-date">Sep 2026</span>
-        <div class="timeline-content">
-          <a href="https://arxiv.org/abs/2609.12623" target="_blank" rel="noopener">SteerDuplex</a> released —
-          steerable full-duplex speech dialogue models that shift tone, persona, speaking rate, and voice style on instruction, with the SteerBench benchmark and two-stage reinforcement learning. <a href="https://github.com/Utkarsh4430/SteerDuplex" target="_blank" rel="noopener">Project page ↗</a>
+      <div class="updates-col">
+        <h3 class="updates-col-title">Conference Acceptances</h3>
+        <div class="timeline updates-scroll">
+
+          <div class="timeline-item accept-item">
+            <div class="timeline-content">
+              🎉 <strong>4</strong> papers accepted at <span class="venue-badge">NeurIPS 2026</span>!
+            </div>
+          </div>
+
+          <div class="timeline-item accept-item">
+            <div class="timeline-content">
+              🎉 <strong>2</strong> papers accepted at <span class="venue-badge">EMNLP 2026</span>!
+            </div>
+          </div>
+
+          <div class="timeline-item accept-item">
+            <div class="timeline-content">
+              🎉 <a href="https://arxiv.org/abs/2607.28896" target="_blank" rel="noopener">TORUS</a> accepted at <span class="venue-badge">EMNLP SALMA Workshop 2026</span>!
+            </div>
+          </div>
+
+          <div class="timeline-item accept-item">
+            <div class="timeline-content">
+              🎉 <strong>3</strong> papers accepted at <span class="venue-badge">Interspeech 2026</span>!
+            </div>
+          </div>
+
+          <div class="timeline-item accept-item">
+            <div class="timeline-content">
+              🎉 <strong>2</strong> papers accepted at <span class="venue-badge">ACL 2026</span>!
+            </div>
+          </div>
+
+          <div class="timeline-item accept-item">
+            <div class="timeline-content">
+              🎉 <strong>2</strong> papers accepted at <span class="venue-badge">CVPR 2026</span>!
+            </div>
+          </div>
+
+          <div class="timeline-item accept-item">
+            <div class="timeline-content">
+              🎉 <strong>1</strong> paper accepted at <span class="venue-badge">ICASSP 2026</span>!
+            </div>
+          </div>
+
+          <div class="timeline-item accept-item">
+            <div class="timeline-content">
+              <a href="https://arxiv.org/abs/2507.10859" target="_blank" rel="noopener">MultiVox</a>
+              accepted as <strong>Oral</strong> at <span class="venue-badge">EMNLP 2025</span>
+              — multimodal voice assistant benchmark over audio-visual content.
+            </div>
+          </div>
+
+          <div class="timeline-item accept-item">
+            <div class="timeline-content">
+              <a href="https://arxiv.org/abs/2507.08128" target="_blank" rel="noopener">Audio Flamingo 3</a>
+              selected as <strong>Spotlight</strong> at <span class="venue-badge">NeurIPS 2025</span>.
+              New state-of-the-art on MMAU and Air-Bench.
+            </div>
+          </div>
+
+          <div class="timeline-item accept-item">
+            <div class="timeline-content">
+              <a href="https://arxiv.org/abs/2410.13179" target="_blank" rel="noopener">EH-MAM</a>
+              accepted as <strong>Oral</strong> at <span class="venue-badge">EMNLP 2025</span>
+              — easy-to-hard masked acoustic modeling for self-supervised pre-training.
+            </div>
+          </div>
+
+          <div class="timeline-item accept-item">
+            <div class="timeline-content">
+              Three papers at <span class="venue-badge">NAACL 2025</span>:
+              <a href="https://arxiv.org/abs/2503.06375" target="_blank" rel="noopener">ProSE</a> (Oral),
+              <a href="https://arxiv.org/abs/2410.15062" target="_blank" rel="noopener">PAT</a> (Oral), and
+              <a href="https://arxiv.org/abs/2410.16505" target="_blank" rel="noopener">Do Audio-Language Models Understand Linguistic Variations?</a>
+            </div>
+          </div>
+
+          <div class="timeline-item accept-item">
+            <div class="timeline-content">
+              <a href="https://arxiv.org/abs/2503.03983" target="_blank" rel="noopener">Audio Flamingo 2</a>
+              accepted to <span class="venue-badge">ICML 2025</span>.
+              Long-form audio understanding up to 5 minutes across speech, music, and environmental sound.
+            </div>
+          </div>
+
+          <div class="timeline-item accept-item">
+            <div class="timeline-content">
+              <a href="https://arxiv.org/abs/2410.19168" target="_blank" rel="noopener">MMAU</a>
+              accepted as <strong>Spotlight</strong> at <span class="venue-badge">ICLR 2025</span>.
+              <a href="https://arxiv.org/abs/2511.10289" target="_blank" rel="noopener">Music Flamingo</a>
+              accepted at <span class="venue-badge">ICLR 2026</span>.
+            </div>
+          </div>
+
+          <div class="timeline-item accept-item">
+            <div class="timeline-content">
+              <a href="https://arxiv.org/abs/2406.11768" target="_blank" rel="noopener">GAMA</a>
+              accepted as <strong>Oral</strong> at <span class="venue-badge">EMNLP 2024</span>
+              — general-purpose audio understanding via instruction-tuned LLMs.
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <div class="timeline-item">
-        <span class="timeline-date">Sep 2026</span>
-        <div class="timeline-content">
-          🎉 Two papers accepted at <span class="venue-badge">EMNLP 2026</span>.
-        </div>
-      </div>
+      <div class="updates-col">
+        <h3 class="updates-col-title">Releases</h3>
+        <div class="timeline updates-scroll">
 
-      <div class="timeline-item">
-        <span class="timeline-date">Aug 2026</span>
-        <div class="timeline-content">
-          <img src="assets/model_logos/duplex_world.png" alt="" style="display:inline-block;height:1em;vertical-align:-0.18em;margin-right:5px;"><a href="https://arxiv.org/abs/2608.10716" target="_blank" rel="noopener">DuplexWorld</a> released —
-          a benchmark for speech-to-speech voice agents across six real-world domains, evaluating agentic, conversational, and speech-naturalness quality over 156 scenarios and 350+ hours of dialogue. <a href="https://duplexworld.github.io/" target="_blank" rel="noopener">Project page ↗</a>
-        </div>
-      </div>
+          <div class="timeline-item">
+            <span class="timeline-date">Sep 2026</span>
+            <div class="timeline-content">
+              <a href="https://arxiv.org/abs/2609.12623" target="_blank" rel="noopener">SteerDuplex</a> released —
+              steerable full-duplex speech dialogue models that shift tone, persona, speaking rate, and voice style on instruction, with the SteerBench benchmark and two-stage reinforcement learning. <a href="https://github.com/Utkarsh4430/SteerDuplex" target="_blank" rel="noopener">Project page ↗</a>
+            </div>
+          </div>
 
-      <div class="timeline-item">
-        <span class="timeline-date">Jul 2026</span>
-        <div class="timeline-content">
-          <img src="assets/model_logos/torus.png" alt="" style="display:inline-block;height:1em;vertical-align:-0.18em;margin-right:5px;"><a href="https://arxiv.org/abs/2607.28896" target="_blank" rel="noopener">TORUS</a> released —
-          the first self-coherence benchmark for unified audio models, testing whether a model's generation and understanding heads agree about the same audio. <a href="https://torus-benchmark.github.io/" target="_blank" rel="noopener">Project page ↗</a>
-        </div>
-      </div>
+          <div class="timeline-item">
+            <span class="timeline-date">Aug 2026</span>
+            <div class="timeline-content">
+              <img src="assets/model_logos/duplex_world.png" alt="" style="display:inline-block;height:1em;vertical-align:-0.18em;margin-right:5px;"><a href="https://arxiv.org/abs/2608.10716" target="_blank" rel="noopener">DuplexWorld</a> released —
+              a benchmark for speech-to-speech voice agents across six real-world domains, evaluating agentic, conversational, and speech-naturalness quality over 156 scenarios and 350+ hours of dialogue. <a href="https://duplexworld.github.io/" target="_blank" rel="noopener">Project page ↗</a>
+            </div>
+          </div>
 
-      <div class="timeline-item">
-        <span class="timeline-date">Jul 2026</span>
-        <div class="timeline-content">
-          <a href="https://arxiv.org/abs/2607.16107" target="_blank" rel="noopener">Audio-Visual Flamingo</a>
-          released — fully open audio-visual LLM for long, complex video with timestamp-grounded chain-of-thought reasoning. <a href="https://avflamingo.pages.dev/" target="_blank" rel="noopener">Project page ↗</a>
-        </div>
-      </div>
+          <div class="timeline-item">
+            <span class="timeline-date">Jul 2026</span>
+            <div class="timeline-content">
+              <img src="assets/model_logos/torus.png" alt="" style="display:inline-block;height:1em;vertical-align:-0.18em;margin-right:5px;"><a href="https://arxiv.org/abs/2607.28896" target="_blank" rel="noopener">TORUS</a> released —
+              the first self-coherence benchmark for unified audio models, testing whether a model's generation and understanding heads agree about the same audio. <a href="https://torus-benchmark.github.io/" target="_blank" rel="noopener">Project page ↗</a>
+            </div>
+          </div>
 
-      <div class="timeline-item">
-        <span class="timeline-date">Jun 2026</span>
-        <div class="timeline-content">
-          <a href="https://arxiv.org/abs/2606.06615" target="_blank" rel="noopener">FIGMA</a>
-          accepted to <span class="venue-badge">ACL 2026</span>
-          — fine-grained music retrieval with multi-view contrastive learning. <a href="https://nishitanand.github.io/figma-website/" target="_blank" rel="noopener">Project page ↗</a>
-        </div>
-      </div>
+          <div class="timeline-item">
+            <span class="timeline-date">Jul 2026</span>
+            <div class="timeline-content">
+              <a href="https://arxiv.org/abs/2607.16107" target="_blank" rel="noopener">Audio-Visual Flamingo</a>
+              released — fully open audio-visual LLM for long, complex video with timestamp-grounded chain-of-thought reasoning. <a href="https://avflamingo.pages.dev/" target="_blank" rel="noopener">Project page ↗</a>
+            </div>
+          </div>
 
-      <div class="timeline-item">
-        <span class="timeline-date">Apr 2026</span>
-        <div class="timeline-content">
-          <a href="https://arxiv.org/abs/2604.10905" target="_blank" rel="noopener">Audio Flamingo Next</a>
-          released — next-generation open audio-language model supporting 30-minute audio, temporal reasoning, and 1M+ hours of training data. <a href="https://afnext-umd-nvidia.github.io/" target="_blank" rel="noopener">Project page ↗</a>
-        </div>
-      </div>
+          <div class="timeline-item">
+            <span class="timeline-date">Apr 2026</span>
+            <div class="timeline-content">
+              <a href="https://arxiv.org/abs/2604.10905" target="_blank" rel="noopener">Audio Flamingo Next</a>
+              released — next-generation open audio-language model supporting 30-minute audio, temporal reasoning, and 1M+ hours of training data. <a href="https://afnext-umd-nvidia.github.io/" target="_blank" rel="noopener">Project page ↗</a>
+            </div>
+          </div>
 
-      <div class="timeline-item">
-        <span class="timeline-date">Apr 2026</span>
-        <div class="timeline-content">
-          <a href="https://arxiv.org/abs/2604.23860" target="_blank" rel="noopener">Exploring Audio Hallucination in Egocentric Video</a>
-          accepted to <span class="venue-badge">ICASSP 2026</span>.
-        </div>
-      </div>
+          <div class="timeline-item">
+            <span class="timeline-date">Mar 2026</span>
+            <div class="timeline-content">
+              <a href="https://arxiv.org/abs/2603.14145" target="_blank" rel="noopener">MMOU</a> released —
+              omni-modal benchmark for reasoning over long, complex real-world videos across visual, audio, and text signals.
+            </div>
+          </div>
 
-      <div class="timeline-item">
-        <span class="timeline-date">Apr 2026</span>
-        <div class="timeline-content">
-          <a href="https://arxiv.org/abs/2604.02605" target="_blank" rel="noopener">Do Audio-Visual Large Language Models Really See and Hear?</a>
-          accepted to <span class="venue-badge">CVPR 2026</span> — mechanistic interpretability study revealing a strong vision bias in audio-visual LLMs.
-        </div>
-      </div>
+          <div class="timeline-item">
+            <span class="timeline-date">Mar 2026</span>
+            <div class="timeline-content">
+              <a href="https://arxiv.org/abs/2603.29263" target="_blank" rel="noopener">AHA: Audio Hallucination Attacks</a> released —
+              probing the reliability of large audio language models with 6,500 adversarial QA pairs.
+            </div>
+          </div>
 
-      <div class="timeline-item">
-        <span class="timeline-date">Mar 2026</span>
-        <div class="timeline-content">
-          <a href="https://arxiv.org/abs/2603.14145" target="_blank" rel="noopener">MMOU</a> released —
-          omni-modal benchmark for reasoning over long, complex real-world videos across visual, audio, and text signals.
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <span class="timeline-date">Mar 2026</span>
-        <div class="timeline-content">
-          <a href="https://arxiv.org/abs/2603.29263" target="_blank" rel="noopener">AHA: Audio Hallucination Attacks</a> released —
-          probing the reliability of large audio language models with 6,500 adversarial QA pairs.
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <span class="timeline-date">Dec 2025</span>
-        <div class="timeline-content">
-          <a href="https://arxiv.org/abs/2507.10859" target="_blank" rel="noopener">MultiVox</a>
-          accepted as <strong>Oral</strong> at <span class="venue-badge">EMNLP 2025</span>
-          — multimodal voice assistant benchmark over audio-visual content.
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <span class="timeline-date">Nov 2025</span>
-        <div class="timeline-content">
-          <a href="https://arxiv.org/abs/2507.08128" target="_blank" rel="noopener">Audio Flamingo 3</a>
-          selected as <strong>Spotlight</strong> at <span class="venue-badge">NeurIPS 2025</span>.
-          New state-of-the-art on MMAU and Air-Bench.
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <span class="timeline-date">Oct 2025</span>
-        <div class="timeline-content">
-          <a href="https://arxiv.org/abs/2410.13179" target="_blank" rel="noopener">EH-MAM</a>
-          accepted as <strong>Oral</strong> at <span class="venue-badge">EMNLP 2025</span>
-          — easy-to-hard masked acoustic modeling for self-supervised pre-training.
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <span class="timeline-date">Sep 2025</span>
-        <div class="timeline-content">
-          Three papers at <span class="venue-badge">NAACL 2025</span>:
-          <a href="https://arxiv.org/abs/2503.06375" target="_blank" rel="noopener">ProSE</a> (Oral),
-          <a href="https://arxiv.org/abs/2410.15062" target="_blank" rel="noopener">PAT</a> (Oral), and
-          <a href="https://arxiv.org/abs/2410.16505" target="_blank" rel="noopener">Do Audio-Language Models Understand Linguistic Variations?</a>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <span class="timeline-date">Jul 2025</span>
-        <div class="timeline-content">
-          <a href="https://arxiv.org/abs/2503.03983" target="_blank" rel="noopener">Audio Flamingo 2</a>
-          accepted to <span class="venue-badge">ICML 2025</span>.
-          Long-form audio understanding up to 5 minutes across speech, music, and environmental sound.
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <span class="timeline-date">May 2025</span>
-        <div class="timeline-content">
-          <a href="https://arxiv.org/abs/2410.19168" target="_blank" rel="noopener">MMAU</a>
-          accepted as <strong>Spotlight</strong> at <span class="venue-badge">ICLR 2025</span>.
-          <a href="https://arxiv.org/abs/2511.10289" target="_blank" rel="noopener">Music Flamingo</a>
-          accepted at <span class="venue-badge">ICLR 2026</span>.
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <span class="timeline-date">Nov 2024</span>
-        <div class="timeline-content">
-          <a href="https://arxiv.org/abs/2406.11768" target="_blank" rel="noopener">GAMA</a>
-          accepted as <strong>Oral</strong> at <span class="venue-badge">EMNLP 2024</span>
-          — general-purpose audio understanding via instruction-tuned LLMs.
         </div>
       </div>
 
@@ -605,6 +626,14 @@
     <div class="timeline reveal">
 
       <div class="timeline-item">
+        <span class="timeline-date">Oct 2026</span>
+        <div class="timeline-content">
+          <a href="https://salma-workshop.github.io/salma-2026/" target="_blank" rel="noopener">SALMA Workshop @ EMNLP 2026</a>
+          — Speech and Audio Language Models. Oct 24–29, Budapest, Hungary.
+        </div>
+      </div>
+
+      <div class="timeline-item">
         <span class="timeline-date">Oct 2025</span>
         <div class="timeline-content">
           <a href="https://dcase.community/challenge2025/index#audio-question-answering" target="_blank" rel="noopener">DCASE 2025 Audio Question Answering Challenge</a>
@@ -665,6 +694,7 @@
   </div>
   <div class="footer-bottom">
     <p>© 2025 GAMMA Lab, University of Maryland.</p>
+    <p>Website maintained by <a href="https://aryanvib.github.io/" target="_blank" rel="noopener" style="color:var(--accent)">Aryan Bhosale</a>.</p>
     <p>Department of Computer Science · College Park, MD</p>
   </div>
 </footer>
@@ -674,6 +704,7 @@
 <script src="js/theme.js"></script>
 <script src="js/hero.js"></script>
 <script src="js/reveal.js"></script>
+<script src="js/marquee.js?v=20260926"></script>
 
 </body>
 </html>
